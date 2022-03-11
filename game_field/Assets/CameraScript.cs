@@ -7,7 +7,6 @@ public class CameraScript : MonoBehaviour
     // Vector3 cameraPosition = new Vector3(400.0f, 250.0f, 0.0f);
     // Vector3 cameraAngle = new Vector3(0.0f, 35.0f, 0.0f);
     // Vector3 worldCentre = new Vector3(0.0f, 0.0f, 0.0f);
-
     Vector3 cameraPosition = new Vector3(400.0f, 250.0f, 0.0f);
     Vector3 cameraAngle = new Vector3(0.0f, 35.0f, 0.0f);
     Vector3 worldCentre = new Vector3(0.0f, 0.0f, 0.0f);
@@ -22,7 +21,6 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         // Sets the camera's starting position and angle on the screen in the beginning.
-
         transform.position = cameraPosition;
         transform.LookAt(cameraAngle);
     }
@@ -31,7 +29,6 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         // Camera rotation values for orbiting the island.
-
         if (isAutoRotate)
         {
             transform.LookAt(cameraAngle);

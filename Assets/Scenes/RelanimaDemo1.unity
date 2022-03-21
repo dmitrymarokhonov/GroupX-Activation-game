@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &16825839
@@ -231,6 +230,14 @@ PrefabInstance:
     - target: {fileID: 2520324097333860144, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_Name
       value: Cow HM (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6524024366175386094, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: cam
@@ -580,6 +587,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow HM (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 6524024366175386094, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: cam
       value: 
@@ -731,6 +746,14 @@ PrefabInstance:
       value: Cow HM (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -808,6 +831,14 @@ PrefabInstance:
       value: Cow HM (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -834,7 +865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &304893777
@@ -1045,7 +1075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &412765185
@@ -1218,6 +1247,14 @@ PrefabInstance:
     - target: {fileID: 2520324097333860144, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_Name
       value: Cow HM (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
@@ -1559,6 +1596,14 @@ PrefabInstance:
       value: Cow HM (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -1896,6 +1941,14 @@ PrefabInstance:
       value: Cow HM
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -2117,6 +2170,14 @@ PrefabInstance:
       value: Cow HM (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -2326,6 +2387,14 @@ PrefabInstance:
     - target: {fileID: 2520324097333860144, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_Name
       value: Cow HM (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
@@ -2758,6 +2827,14 @@ PrefabInstance:
       value: Cow HM (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -2878,7 +2955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1041683931
@@ -2950,7 +3026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1061749875
@@ -2992,7 +3067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 1061882986}
   radius: 5
   movementHelper: 150
 --- !u!195 &1061882986
@@ -3219,6 +3293,14 @@ PrefabInstance:
       value: Cow HM (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -3378,7 +3460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1275767928
@@ -3558,7 +3639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1327693786
@@ -3785,6 +3865,14 @@ PrefabInstance:
       value: Cow HM (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -3872,7 +3960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
@@ -4390,6 +4478,10 @@ PrefabInstance:
     - target: {fileID: 5214073462944481276, guid: 80bd81001971a5e45b645f0c02352cd1, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276152012477949745, guid: 80bd81001971a5e45b645f0c02352cd1, type: 3}
+      propertyPath: m_Convex
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5321025508815350018, guid: 80bd81001971a5e45b645f0c02352cd1, type: 3}
       propertyPath: m_Layer
@@ -7146,7 +7238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1532044446
@@ -7198,7 +7289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1752938311
@@ -7240,7 +7330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1869453011
@@ -7332,6 +7421,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow HM (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 6524024366175386094, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: cam
       value: 
@@ -7404,6 +7501,14 @@ PrefabInstance:
     - target: {fileID: 2520324097333860144, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_Name
       value: Cow HM (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4240104145212918285, guid: dab6236fdebe805468a4d3022688e57b, type: 3}
       propertyPath: m_IsKinematic
@@ -7637,7 +7742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111318b433e94c728396bce11457d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   radius: 5
   movementHelper: 150
 --- !u!195 &1996682312

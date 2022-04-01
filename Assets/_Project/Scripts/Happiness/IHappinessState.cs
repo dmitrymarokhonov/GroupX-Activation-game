@@ -2,8 +2,7 @@
 {
     public interface IHappinessState
     {
-        void Unhappy(IHappinessContext context);
-        void Happy(IHappinessContext context);
-        void Draining(IHappinessContext context);
+        void Click(IHappinessContext context);
+        void Tick(IHappinessContext context);
     }
 }

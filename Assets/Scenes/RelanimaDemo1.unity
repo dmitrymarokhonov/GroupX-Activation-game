@@ -2758,7 +2758,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c7a4edd0943ea409b6b32a3a53c508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notes: []
+  notes:
+  - {fileID: 8300000, guid: 537abcb9746e1c34d92206e6e5ea5121, type: 3}
+  - {fileID: 8300000, guid: 90f28ac5b8f51e946a6b0bed1be19e94, type: 3}
+  - {fileID: 8300000, guid: 58688939afd231246901259c4ea78aae, type: 3}
+  - {fileID: 8300000, guid: 84767ebf4262a6f44a076733e61b586d, type: 3}
+  - {fileID: 8300000, guid: f47c109eb43f81049bbde91eea3d2fc4, type: 3}
+  - {fileID: 8300000, guid: 5d754dcc5576fed49bfc777abb0be7f0, type: 3}
+  - {fileID: 8300000, guid: 3c42030d1b616ec479254009aab39e1b, type: 3}
+  - {fileID: 8300000, guid: 48819ed1fdf29c04ca08b6140ba1d600, type: 3}
 --- !u!1001 &984456559
 PrefabInstance:
   m_ObjectHideFlags: 0

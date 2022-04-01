@@ -14,34 +14,22 @@ namespace Relanima.Happiness
 
         private float _addition;
         private IHappinessState _currentState;
-
-        #region Unity Event Functions
+        private AudioController _audioController;
         
         private void Start()
         {
-            _currentState = new UnhappyState(this);
             happySliderBar.SetMaxValue(maxHappiness);
+            _currentState = new UnhappyState(this);
             _addition = maxHappiness / 8;
-            InvokeRepeating(nameof(TrySpawnReward), 1.0f, 3.0f);
+            _audioController = GameObject.Find("Main Camera").GetComponent<AudioController>();
         }
 
         private void Update()
         {
-            _currentState.Draining(this);
+            Tick();
         }
         
-        #endregion
-        
-        public float GetNormalizedHappiness()
-        {
-            return currentHappiness / maxHappiness;
-        }
-
-        public void UpdateSliderBar()
-        {
-            if (happySliderBar == null) return;
-            happySliderBar.SetValue(currentHappiness);
-        }
+        private void Tick() => _currentState.Tick(this);
 
         public void AddHappiness()
         {
@@ -54,6 +42,32 @@ namespace Relanima.Happiness
             
             UpdateSliderBar();
         }
+        
+        public void UpdateSliderBar()
+        {
+            if (happySliderBar == null) return;
+            happySliderBar.SetValue(currentHappiness);
+        }
+        
+        public void TrySpawnReward()
+        {
+            var lowerBoundary = maxHappiness / 2;
+            var upperBoundary = maxHappiness * 1.2f;
+            var randomValue = Random.Range(lowerBoundary, upperBoundary);
+            
+            if (currentHappiness < randomValue) return;
+            
+            RewardManager.SpawnReward(gameObject);
+        }
+        
+        private void OnMouseDown()
+        {
+            Click();
+            HandleClickParticle();
+            HandleClickAudioEffect();
+        }
+
+        private void Click() => _currentState.Click(this);
 
         private void HandleClickParticle()
         {
@@ -62,37 +76,14 @@ namespace Relanima.Happiness
             var particlePosition = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
             Instantiate(clickParticle, particlePosition, clickParticle.transform.rotation);
         }
-        
-        private void OnMouseDown()
-        {
-            Happy();
-            HandleClickParticle();
-        }
 
-        private void TrySpawnReward()
-        {
-            // Very, very bad
-            if (_currentState.GetType() != typeof(DrainingState)) return;
+        private void HandleClickAudioEffect() => _audioController.PlayClip(GetNormalizedHappiness());
+        
+        private float GetNormalizedHappiness() => currentHappiness / maxHappiness;
 
-            var randomValue = Random.Range(maxHappiness / 2, maxHappiness * 1.2f);
-            if (currentHappiness < randomValue) return;
-
-            RewardManager.SpawnReward(gameObject);
-        }
-        
-        #region State Specific Behaviour
-
-        public void Unhappy() => _currentState.Unhappy(this);
-        
-        public void Happy() => _currentState.Happy(this);
-        
-        public void Draining() => _currentState.Draining(this);
-        
         void IHappinessContext.SetState(IHappinessState newState)
         {
             _currentState = newState;
         }
-
-        #endregion
     }
 }

@@ -1,33 +1,31 @@
 ﻿namespace Relanima.Happiness
 {
-    public class HappyState : IHappinessState
+    public class HappinessIncreasingState : IHappinessState
     {
         private readonly HappinessManager _happinessManager;
 
-        public HappyState(HappinessManager happinessManager)
+        public HappinessIncreasingState(HappinessManager happinessManager)
         {
             _happinessManager = happinessManager;
-            _happinessManager.unhappyImage.gameObject.SetActive(false);
             _happinessManager.happySliderBar.gameObject.SetActive(true);
         }
 
-        public void Unhappy(IHappinessContext context)
-        {
-        }
-
-        public void Happy(IHappinessContext context)
+        public void Click(IHappinessContext context)
         {
             _happinessManager.AddHappiness();
             
             if (_happinessManager.currentHappiness >= _happinessManager.maxHappiness)
             {
-                Draining(context);
+                Exit(context);
             }
         }
 
-        public void Draining(IHappinessContext context)
+        public void Tick(IHappinessContext context)
         {
-            if (_happinessManager.GetNormalizedHappiness() < 1) return;
+        }
+
+        private void Exit(IHappinessContext context)
+        {
             context.SetState(new DrainingState(_happinessManager));
         }
     }

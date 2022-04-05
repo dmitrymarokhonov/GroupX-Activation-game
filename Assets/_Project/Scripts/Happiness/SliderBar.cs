@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,7 @@ namespace Relanima.Happiness
 
         private void Start()
         {
-            SetGreen();
+            fill.color = green;
         }
 
         public void SetMaxValue(float value)
@@ -24,22 +25,28 @@ namespace Relanima.Happiness
             slider.maxValue = value;
         }
 
-        public void SetDefaultValue(float value)
-        {
-            SetValue(value);
-        }
-
         public void SetValue(float value)
         {
             slider.value = value;
-
-            if (!useGradient) return;
-            fill.color = gradient.Evaluate(slider.normalizedValue);;
+            EvaluateGradientColor();
         }
 
-        public void SetGreen()
+        public void Reset()
         {
+            gameObject.SetActive(false);
+            useGradient = false;
             fill.color = green;
+        }
+
+        public void UseGradient()
+        {
+            useGradient = true;
+        }
+
+        private void EvaluateGradientColor()
+        {
+            if (!useGradient) return;
+            fill.color = gradient.Evaluate(slider.normalizedValue);
         }
     }
 }

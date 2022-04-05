@@ -7,24 +7,24 @@
         public UnhappyState(HappinessManager happinessManager)
         {
             _happinessManager = happinessManager;
-            _happinessManager.happySliderBar.gameObject.SetActive(false);
+            _happinessManager.happySliderBar.Reset();
             _happinessManager.unhappyImage.gameObject.SetActive(true);
-            _happinessManager.happySliderBar.useGradient = false;
-            _happinessManager.happySliderBar.SetGreen();
         }
 
-        public void Unhappy(IHappinessContext context)
-        {
-        }
-
-        public void Happy(IHappinessContext context)
+        public void Click(IHappinessContext context)
         {
             _happinessManager.AddHappiness();
-            context.SetState(new HappyState(_happinessManager));
+            Exit(context);
         }
 
-        public void Draining(IHappinessContext context)
+        public void Tick(IHappinessContext context)
         {
+        }
+
+        private void Exit(IHappinessContext context)
+        {
+            _happinessManager.unhappyImage.gameObject.SetActive(false);
+            context.SetState(new HappinessIncreasingState(_happinessManager));
         }
     }
 }

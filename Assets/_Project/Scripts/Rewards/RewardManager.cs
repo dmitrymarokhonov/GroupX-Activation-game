@@ -10,9 +10,8 @@ namespace Relanima.Rewards
         private static int _rewardsCollected;
         private static int _totalRewardsSpawned;
         private const int MaxRewardsOnField = 50;
+        
         private static RewardSpawner _rewardSpawner;
-        // private RewardCollector _rewardCollector;
-
         public static RewardManager instance;
 
         private void Awake()
@@ -47,6 +46,20 @@ namespace Relanima.Rewards
             _totalRewardsSpawned++;
         }
 
+        public static int RewardCount()
+        {
+            return _rewardsCollected;
+        }
+
+        public void ReduceRewardsBy(int amount)
+        {
+            _rewardsCollected -= amount;
+            if (_rewardsCollected < 0)
+                _rewardsCollected = 0;
+            
+            UpdateRewardDisplay();
+        }
+        
         private void UpdateRewardDisplay()
         {
             rewardDisplay.text = _rewardsCollected.ToString();

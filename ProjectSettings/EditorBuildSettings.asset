@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/RelanimaMainMenuScene.unity
+    guid: 2ba1cc7a8686ea74f90ab5f840ab834e
+  - enabled: 1
+    path: Assets/Scenes/RelanimaGameFieldScene.unity
+    guid: b3ada5739cac9b84c9b70630ac2558f9
   m_configObjects: {}

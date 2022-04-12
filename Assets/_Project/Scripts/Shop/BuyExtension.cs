@@ -7,6 +7,7 @@ namespace Relanima.Shop
     public class BuyExtension : MonoBehaviour, IPointerDownHandler
     {
         public Text priceText;
+        public Text unlockedText;
         public Image lockImage;
     
         public Shop.Extension extension;
@@ -16,10 +17,11 @@ namespace Relanima.Shop
         private void Start()
         {
             _shopManager = shopManager.GetComponent<Shop>();
-            lockImage.gameObject.SetActive(!_shopManager.IsExtensionBought(extension));
-            priceText.text = _shopManager.IsExtensionBought(extension) 
-                ? "Unlocked" 
-                : "Price: " + _shopManager.PriceOf(extension);
+
+            if (!_shopManager.IsExtensionBought(extension)) return;
+            lockImage.gameObject.SetActive(false);
+            priceText.gameObject.SetActive(false);
+            unlockedText.gameObject.SetActive(true);
         }
     
         public void OnPointerDown(PointerEventData eventData)
@@ -29,10 +31,17 @@ namespace Relanima.Shop
             Unlock();
         }
 
+        public int PriceOf()
+        {
+            return _shopManager.PriceOf(extension);
+        }
+
         private void Unlock()
         {
-            priceText.text = "Unlocked";
+            // priceText.text = "Unlocked";
             lockImage.gameObject.SetActive(false);
+            priceText.gameObject.SetActive(false);
+            unlockedText.gameObject.SetActive(true);
         }
     }
 }

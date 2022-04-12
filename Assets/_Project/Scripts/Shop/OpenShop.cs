@@ -14,7 +14,12 @@ namespace Relanima.Shop
         
             var isOpen = shopPanel.activeSelf;
             shopPanel.SetActive(!isOpen);
-            buttonText.text = !isOpen ? "CLOSE SHOP" : "SHOP";
+            // buttonText.text = !isOpen ? "CLOSE SHOP" : "SHOP";
+        }
+
+        public bool IsShopOpen()
+        {
+            return shopPanel.activeSelf;
         }
     }
 }

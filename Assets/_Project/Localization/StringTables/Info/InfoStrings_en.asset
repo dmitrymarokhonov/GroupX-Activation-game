@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: InfoStrings_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 88058dbdf7a38bf4e8d12847aa17f25f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8261722112
+    m_Localized: What is Relanima?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110074257408
+    m_Localized: How can I set up a game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288567058432
+    m_Localized: How do I play?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369265467392
+    m_Localized: How can I get more animals?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 436751818752
+    m_Localized: What is a Game Timer?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483941933056
+    m_Localized: How can I move around?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1259795898368
+    m_Localized: Tap on the topic you want to know more about
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584623771648
+    m_Localized: 'Relanima is an activation game aimed for children. The main aim
+      of this game is to take care of animals. The activation side of the game comes
+      from the player moving around a room to tap the different elements on a large-scale
+      screen. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1779365306368
+    m_Localized: "AS A NEW PLAYER \r\nSelect \u2018New Game\u2019 from the main menu.
+      Enter a username of your choice. You can return to the game later on with this
+      username, so you might want to write it down. Then select your wanted game
+      setting toggles and press \u2018Start a new game\u2019 to start the game. 
+      \r\n \nAS A RETURNING PLAYER  \r\nSelect \u2018Load Game\u2019 from the main
+      menu. Select your username from the list. Select the game setting toggles and
+      press \u2018Load Game\u2019. The game will continue on from where you last
+      left off. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2156001222656
+    m_Localized: "In Relanima your game objective is to take care of the animals
+      on the island. The animals that want attention have a speech bubble with an
+      \u2018!\u2019 above them. To make the animal happy you can pet it by tapping
+      it. As you pet the animal, a happiness bar will appear above them and it will
+      increase as you pet it. \rThe animals will drop stars as a reward of taking
+      good care of them. To collect these stars, tap on them and they will be added
+      to your star count. You can see your star count on the top right corner of
+      the screen.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2187831795712
+    m_Localized: This cow would like to be petted
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306396381184
+    m_Localized: A happy cow and a dropped star to collect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2762111705088
+    m_Localized: "To get more animals on your island visit the shop. To open the
+      shop, tap on the Shop icon on the screen. The currency in the shop are stars,
+      which you collect in game. Each animal has a set price below their image. If
+      you already have the animal the text below will say \u2018Unlocked\u2019. To
+      unlock the animal, tap on its image. If you have enough stars, the animal will
+      be unlocked and automatically added to your island.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3538947137536
+    m_Localized: "The game timer is a tool designed to limit playtime. It's important
+      to take breaks from playing and this tool will help the player to stop playing
+      on time. When the timer is about to end, night-time will start to set in on
+      the island, telling the player that the animals are about to go to sleep and
+      that it is time to say goodbye. \r\n\r\nThe game timer is an optional toggle
+      on the start screen. To set it up, tap the Game time toggle on. A timer will
+      appear on the right side of the screen. The timer is in minutes, and it can
+      be adjusted in increments of 5.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3710783578112
+    m_Localized: You can move around the island by changing your view with the view
+      toggle. You can also move the toggle itself by dragging it across the screen.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

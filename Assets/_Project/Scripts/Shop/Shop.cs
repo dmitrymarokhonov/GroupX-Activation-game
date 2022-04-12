@@ -7,7 +7,6 @@ namespace Relanima.Shop
 {
     public class Shop : MonoBehaviour
     {
-        public Text starCount;
         public Button notEnough;
         public Button ok;
     
@@ -28,11 +27,6 @@ namespace Relanima.Shop
             {Extension.Giraffe, 15}
         };
 
-        private void Start()
-        {
-            UpdateAvailableResourcesText();
-        }
-    
         public bool IsExtensionBought(Extension extension)
         {
             return _boughtExtensions.Contains(extension);
@@ -57,8 +51,7 @@ namespace Relanima.Shop
 
             _boughtExtensions.Add(extension);
             RewardManager.instance.ReduceRewardsBy(PriceOf(extension));
-
-            UpdateAvailableResourcesText();
+            
             return true;
         }
 
@@ -66,11 +59,6 @@ namespace Relanima.Shop
         {
             notEnough.gameObject.SetActive(true);
             ok.gameObject.SetActive(true);
-        }
-
-        private void UpdateAvailableResourcesText()
-        {
-            starCount.text = "You have " + RewardManager.RewardCount() + " stars left.";
         }
     }
 }

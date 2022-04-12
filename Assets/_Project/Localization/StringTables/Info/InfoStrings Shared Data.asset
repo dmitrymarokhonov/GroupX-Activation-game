@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: InfoStrings Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: InfoStrings
+  m_TableCollectionNameGuidString: 88058dbdf7a38bf4e8d12847aa17f25f
+  m_Entries:
+  - m_Id: 8261722112
+    m_Key: WHAT_IS_RELANIMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110074257408
+    m_Key: HOW_TO_SET_UP_GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288567058432
+    m_Key: HOW_TO_PLAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369265467392
+    m_Key: HOW_TO_GET_EXTENSIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 436751818752
+    m_Key: WHAT_IS_GAME_TIMER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483941933056
+    m_Key: HOW_TO_MOVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1259795898368
+    m_Key: INFO_INSTRUCTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584623771648
+    m_Key: WHAT_IS_RELANIMA_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1779365306368
+    m_Key: HOW_TO_SET_UP_GAME_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2156001222656
+    m_Key: HOW_TO_PLAY_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2187831795712
+    m_Key: HOW_TO_PLAY_CONTENT_NEEDY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306396381184
+    m_Key: HOW_TO_PLAY_CONTENT_HAPPY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2762111705088
+    m_Key: HOW_TO_GET_EXTENSIONS_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3538947137536
+    m_Key: WHAT_IS_GAME_TIMER_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3710783578112
+    m_Key: HOW_TO_MOVE_CONTENT
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1649760036322

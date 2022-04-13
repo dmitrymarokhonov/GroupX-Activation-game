@@ -553,7 +553,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1038356195}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &152687525
+--- !u!114 &152687526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4705449381223420883, guid: 22671f98113fc714e9eb4dd13a748325,
+    type: 3}
+  m_PrefabInstance: {fileID: 1038356195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152687524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &152687528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -567,13 +579,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:f38f2451fe6443e4c9c0d9dc8cd8ef02
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 14539918663680
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
-    m_LocalVariables: []
+    m_LocalVariables:
+    - name: shop
+      variable:
+        id: 0
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -592,18 +607,11 @@ MonoBehaviour:
         m_CallState: 1
   references:
     version: 1
---- !u!114 &152687526 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4705449381223420883, guid: 22671f98113fc714e9eb4dd13a748325,
-    type: 3}
-  m_PrefabInstance: {fileID: 1038356195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152687524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    00000000:
+      type: {class: ObjectVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables,
+        asm: Unity.Localization}
+      data:
+        m_Value: {fileID: 1351411127}
 --- !u!1 &174570909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,6 +3541,71 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 144580689}
     m_Modifications:
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152687528}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1615023093}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RefreshString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RefreshString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Localization.Components.LocalizeStringEvent, Unity.Localization
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.Localization.Components.LocalizeStringEvent, Unity.Localization
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705449380791525992, guid: 22671f98113fc714e9eb4dd13a748325,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4705449380791525997, guid: 22671f98113fc714e9eb4dd13a748325,
         type: 3}
       propertyPath: m_Name
@@ -4418,6 +4491,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1351411127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4705449380791525999, guid: 22671f98113fc714e9eb4dd13a748325,
+    type: 3}
+  m_PrefabInstance: {fileID: 1038356195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100263cb8232ec74cbec5870ff6cced4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378157782
 GameObject:
   m_ObjectHideFlags: 0
@@ -8927,12 +9012,27 @@ PrefabInstance:
         type: 3}
       propertyPath: shopManager
       value: 
-      objectReference: {fileID: 99099395}
+      objectReference: {fileID: 99099397}
     - target: {fileID: 4688057248320836349, guid: 53d87da27e258d043951194b788be18e,
         type: 3}
       propertyPath: unlockedText
       value: 
       objectReference: {fileID: 2033955552}
+    - target: {fileID: 4688057248320836350, guid: 53d87da27e258d043951194b788be18e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688057248320836350, guid: 53d87da27e258d043951194b788be18e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688057248320836350, guid: 53d87da27e258d043951194b788be18e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4688057248490971162, guid: 53d87da27e258d043951194b788be18e,
         type: 3}
       propertyPath: extension
@@ -8942,7 +9042,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shopManager
       value: 
-      objectReference: {fileID: 99099395}
+      objectReference: {fileID: 99099397}
     - target: {fileID: 4688057248490971162, guid: 53d87da27e258d043951194b788be18e,
         type: 3}
       propertyPath: unlockedText
@@ -8957,7 +9057,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shopManager
       value: 
-      objectReference: {fileID: 99099395}
+      objectReference: {fileID: 99099397}
     - target: {fileID: 4688057248718400449, guid: 53d87da27e258d043951194b788be18e,
         type: 3}
       propertyPath: unlockedText
@@ -9087,7 +9187,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shopManager
       value: 
-      objectReference: {fileID: 99099395}
+      objectReference: {fileID: 99099397}
     - target: {fileID: 4688057249611827565, guid: 53d87da27e258d043951194b788be18e,
         type: 3}
       propertyPath: unlockedText

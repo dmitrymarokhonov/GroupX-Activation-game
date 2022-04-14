@@ -36,9 +36,29 @@ namespace Relanima
         private void DisplayTime(float timeToDisplay)
         {
             timeToDisplay += 1;
+            if (timeToDisplay >= 3600)
+            {
+                DisplayHoursMinutesSeconds(timeToDisplay);
+            }
+            else
+            {
+                DisplayMinutesSeconds(timeToDisplay);
+            }
+        }
+
+        private void DisplayHoursMinutesSeconds(float timeToDisplay)
+        {
+            var hours = Math.Floor(timeToDisplay / 3600);
+            var minutes = Math.Floor(timeToDisplay / 60 % 60);
+            var seconds = Math.Floor(timeToDisplay % 60);
+            timerDisplay.text = $"{hours:0}h {minutes:00}min {seconds:00}s";
+        }
+
+        private void DisplayMinutesSeconds(float timeToDisplay)
+        {
             var minutes = Math.Floor(timeToDisplay / 60);
             var seconds = Math.Floor(timeToDisplay % 60);
-            timerDisplay.text = $"{minutes:00}:{seconds:00}";
+            timerDisplay.text = $"{minutes:00}min {seconds:00}s";
         }
     }
 }

@@ -6,9 +6,9 @@ public class GameData
 {
     public int resources;
 
-    public GameData(GameStatus status)
+    public GameData()
     {
-        resources = status.resources;
+        resources = GameStatus.resources;
     }
 
 }

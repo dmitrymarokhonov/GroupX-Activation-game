@@ -51,6 +51,12 @@ namespace Relanima.Rewards
             return _rewardsCollected;
         }
 
+        public void SetRewardCollected(int amount)
+        {
+            _rewardsCollected = amount;
+            UpdateRewardDisplay();
+        }
+
         public void ReduceRewardsBy(int amount)
         {
             _rewardsCollected -= amount;

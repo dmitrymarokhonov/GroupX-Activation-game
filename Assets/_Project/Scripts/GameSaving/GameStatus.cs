@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Relanima.Rewards;
 using TMPro;
 using UnityEditorInternal.VersionControl;
 using UnityEngine;
@@ -9,82 +11,54 @@ namespace Relanima
 {
     public class GameStatus : MonoBehaviour
     {
-        public GameObject playerNameField;
-        public GameObject savedGamesList;
-        public GameObject listItemPrefab;
-        public int resources;
-        public TextMeshProUGUI resourceDisplay;
+        public static GameStatus instance;
 
-        private void GetAllSavedGames()
+        public string playerName;
+
+        public static int resources;
+
+        private void Awake()
         {
-            var saveDatalist = SaveSystem.GetAllSavedFiles();
-            var listContent = savedGamesList.GetComponentInChildren<VerticalLayoutGroup>();
-
-            foreach (var dataItem in saveDatalist)
+            if (instance)
             {
-                var obj = Instantiate(listItemPrefab, listContent.transform);
-                var texts = obj.GetComponentsInChildren<Text>();
-                texts[0].text = dataItem.Item1;
-                texts[1].text = dataItem.Item2;
+                Destroy(this);
+            }
+            else
+            {
+                instance = this;
             }
         }
-        
-        private void DestroyAllChildrenOf(GameObject obj)
-        {
-            foreach (Transform child in obj.transform)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
-        }
-
-        private void DisplayGameStatus()
-        {
-            resourceDisplay.text = resources.ToString();
-        }
-        public void PrintTest()
-        {
-            Debug.Log("Button pressed");
-        }
-        
-        
 
         public void SaveGameStatus()
         {
+            resources = RewardManager.RewardCount();
             SaveSystem.SaveGameStatus(this);
-            DestroyAllChildrenOf(savedGamesList.GetComponentInChildren<VerticalLayoutGroup>().gameObject);
-            GetAllSavedGames();
         }
 
         public void LoadGameStatus()
         {
             var data = SaveSystem.LoadGameStatus(GetPlayerName());
             if (data == null) return;
-
-            resources = data.resources;
-            DisplayGameStatus();
+            RewardManager.instance.SetRewardCollected(data.resources);
         }
 
         public void LoadGameStatusByName(string name)
         {
             var data = SaveSystem.LoadGameStatus(name);
-            resources = data.resources;
-            playerNameField.GetComponentInChildren<TMP_InputField>().text = name;
-            DisplayGameStatus();
+            RewardManager.instance.SetRewardCollected(data.resources);
+            playerName = name;
         }
 
         public void ResetGameStatus()
         {
-            playerNameField.GetComponentInChildren<TMP_InputField>().text = "";
+            playerName = "";
             resources = 0;
-            DisplayGameStatus();
         }
 
         public string GetPlayerName()
         {
-            //playerNameField.GetComponentInChildren<TMP_InputField>().text = "player_name";
-            //return playerNameField.GetComponentInChildren<TMP_InputField>().text;
-            return "player_name";
+            Debug.Log(playerName);
+            return playerName;
         }
-
     }
 }

@@ -19,7 +19,7 @@ namespace Relanima
             string path = GetSaveFilePath(status.GetPlayerName());
             FileStream stream = new FileStream(path, FileMode.Create);
 
-            GameData data = new GameData(status);
+            GameData data = new GameData();
             formatter.Serialize(stream, data);
             stream.Close();
             

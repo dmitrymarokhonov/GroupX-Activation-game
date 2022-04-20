@@ -38,6 +38,7 @@ namespace Relanima.TitleScreen
     
         public void ExitYes()
         {
+            Debug.Log("Quitting game...");
             Application.Quit();
         }
 

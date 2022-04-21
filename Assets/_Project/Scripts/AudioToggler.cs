@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +14,11 @@ namespace Relanima
         private Image _image;
         private Shadow _shadow;
         private Vector2 _originalShadowDistance;
+        private AudioSource _audioSource;
 
         private void Awake()
         {
+            _audioSource = UnityEngine.Camera.main.GetComponent<AudioSource>();
             _shadow = GetComponent<Shadow>();
             _originalShadowDistance = _shadow.effectDistance;
             _image = GetComponent<Image>();
@@ -32,7 +33,7 @@ namespace Relanima
                 audioOffObject.SetActive(false);
                 _image.color = audioOnColor;
                 _shadow.effectDistance = _originalShadowDistance;
-
+                _audioSource.mute = false;
             }
             else
             {
@@ -40,6 +41,7 @@ namespace Relanima
                 audioOffObject.SetActive(true);
                 _image.color = audioOffColor;
                 _shadow.effectDistance = new Vector2(0, 0);
+                _audioSource.mute = true;
             }
         }
     }

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TitleScreen_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 138df1385070e904aaabc6a96d70bd3c, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 104692965376
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213111529472
+    m_Localized: Load Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306938109952
+    m_Localized: Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363292778496
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1173191909376
+    m_Localized: Game Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1254917922816
+    m_Localized: Username
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459474128896
+    m_Localized: Enter username
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1711979618304
+    m_Localized: Set Game Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963545583616
+    m_Localized: Game Time (minutes)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2147641974784
+    m_Localized: Start new game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2248783421440
+    m_Localized: Go Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2436864401408
+    m_Localized: Audio ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2944677175296
+    m_Localized: Audio OFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6073619570688
+    m_Localized: Audio {audio.isOn:ON|OFF}
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 30191760957440
+    m_Localized: Are you sure you want to close the game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30371247808512
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30400616325120
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00e0ef1f86050000

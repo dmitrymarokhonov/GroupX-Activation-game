@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: InfoStrings_fi
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fi
+  m_SharedData: {fileID: 11400000, guid: 88058dbdf7a38bf4e8d12847aa17f25f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8261722112
+    m_Localized: "Mik\xE4 on Relanima?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110074257408
+    m_Localized: Kuinka voin aloittaa pelin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288567058432
+    m_Localized: Miten peli toimii?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369265467392
+    m_Localized: "Kuinka saan enemm\xE4n el\xE4imi\xE4?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 436751818752
+    m_Localized: "Mik\xE4 on peliajastin?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483941933056
+    m_Localized: "Kuinka peliss\xE4 liikutaan?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1259795898368
+    m_Localized: "T\xE4pp\xE4\xE4 aihetta, josta haluat tiet\xE4\xE4 enemm\xE4n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1584623771648
+    m_Localized: "Relanima on lapsille suunnattu aktivointipeli. P\xE4\xE4asiallinen
+      tavoite on pit\xE4\xE4 huolta el\xE4imist\xE4. Peli on tarkoitettu pelattavaksi
+      mahdollisimman isolta n\xE4yt\xF6lt\xE4, jolloin pelaaja aktivoituu liikkumalla
+      yletty\xE4kseen t\xE4pp\xE4\xE4m\xE4\xE4n ruudulla olevia elementtej\xE4."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1779365306368
+    m_Localized: "UUSI PELAAJA\r\nValitse p\xE4\xE4valikosta \"Uusi Peli\". Keksi
+      itsellesi nimimerkki. Voit jatkaa peli\xE4 t\xE4ll\xE4 nimimerkill\xE4, joten
+      se kannattaa laittaa muistiin. Valitse seuraavaksi haluamasi peliasetukset
+      ja t\xE4pp\xE4\xE4 \"Aloita uusi peli\".\r\n\r\nPALAAVA PELAAJA\r\nValitse
+      p\xE4\xE4valikosta \"Lataa peli\". Valitse nimimerkkisi listalta, s\xE4\xE4d\xE4
+      haluamasi peliasetukset ja t\xE4pp\xE4\xE4 \"Lataa peli\" -nappia. Peli alkaa
+      siit\xE4 mihin viimeksi j\xE4it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2156001222656
+    m_Localized: "Relanimassa tavoitteesi on huolehtia saaren el\xE4imist\xE4. Huolenpitoa
+      tarvitsevat el\xE4imet ilmaisevat sen puhekuplalla. T\xE4pp\xE4\xE4m\xE4ll\xE4
+      el\xE4int\xE4, sen onnellisuustaso nousee ja puhekuplan tilalle ilmestyy onnellisuusmittari.
+      Onnelliset el\xE4imet pudottavat palkinnoksi t\xE4hti\xE4. Voit ker\xE4t\xE4
+      t\xE4hti\xE4 t\xE4pp\xE4\xE4m\xE4ll\xE4 niit\xE4, jolloin t\xE4htim\xE4\xE4r\xE4si
+      kasvaa. N\xE4et ker\xE4tyt t\xE4htesi ruudun yl\xE4kulmasta. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2187831795712
+    m_Localized: "T\xE4m\xE4 lehm\xE4 kaipaa huolenpitoa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2306396381184
+    m_Localized: "Onnellinen lehm\xE4 on pudottanut t\xE4hden palkinnoksi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2762111705088
+    m_Localized: "Saadaksesi erilaisia el\xE4imi\xE4 saarelle, voit vierailla kaupassa.
+      Avaa kauppa t\xE4pp\xE4\xE4m\xE4ll\xE4 ruudulla n\xE4kyv\xE4\xE4 Kauppa-ikonia.
+      Valuuttana toimii t\xE4hdet, joita voit ker\xE4t\xE4 peliss\xE4. Avaamattoman
+      el\xE4inpaketin hinta n\xE4kyy sen kuvan alapuolella. Omistamiesi el\xE4inpakettia
+      alapuolella lukee \"Avattu\". Avataksesi uuden el\xE4inpaketin, t\xE4pp\xE4\xE4
+      kuvaa. Jos sinulla on tarpeeksi t\xE4hti\xE4, el\xE4inpaketti avautuu ja uudet
+      el\xE4imet lis\xE4t\xE4\xE4n automaattisesti saarelle."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3538947137536
+    m_Localized: "Peliajastin on ty\xF6kalu jolla voidaan rajoittaa peliaikaa. On
+      t\xE4rke\xE4\xE4 pit\xE4\xE4 taukoja pelaamisesta, ja peliajastin auttaakin
+      pelaajaa lopettamaan pelaamisen ajallaan. Kun ajastin on p\xE4\xE4ttym\xE4ss\xE4,
+      ilta alkaa h\xE4m\xE4rt\xE4\xE4 saaren yll\xE4. Silloin on aika alkaa sanomaan
+      el\xE4imille hyv\xE4\xE4 y\xF6t\xE4.\r\n\r\nPeliajastin on valinnainen asetus
+      p\xE4\xE4valikossa. Asettaaksesi ajastimen, t\xE4pp\xE4\xE4 sen valintaruutua
+      p\xE4\xE4valikossa ja valitse sopiva peliaika ilmestyneest\xE4 laskurista.
+      Peliaika valitaan viiden minuutin tarkkuudella."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3710783578112
+    m_Localized: "Saarella liikutaan t\xE4pp\xE4\xE4m\xE4ll\xE4 kamerakontrolleja.
+      Voit liikkua sivuille tai zoomailla l\xE4hemm\xE4s ja kauemmas. Voit my\xF6s
+      liikuttaa kamerakontrolleja mukanasi ruudulla."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

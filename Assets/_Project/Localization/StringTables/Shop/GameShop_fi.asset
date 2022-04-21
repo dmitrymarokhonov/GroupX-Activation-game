@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameShop_fi
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fi
+  m_SharedData: {fileID: 11400000, guid: f38f2451fe6443e4c9c0d9dc8cd8ef02, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 13110337536
+    m_Localized: KAUPPA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131259686912
+    m_Localized: "T\xE4pp\xE4\xE4 el\xE4int\xE4 avataksesi paketin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 312923381760
+    m_Localized: "Sinulla on {game.RewardCount:plural:1 t\xE4hti|{} t\xE4hte\xE4}"
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 2654829797376
+    m_Localized: 'Hinta: {animal.PriceOf}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 3125799804928
+    m_Localized: "Ker\xE4\xE4 lis\xE4\xE4 t\xE4hti\xE4 avataksesi t\xE4m\xE4n el\xE4imen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3318435799040
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7181385588736
+    m_Localized: Avattu!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14539918663680
+    m_Localized: '{shop.IsShopOpen:SULJE KAUPPA|KAUPPA}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00e0afdb4800000000e02f206a02000000e0af56390d0000

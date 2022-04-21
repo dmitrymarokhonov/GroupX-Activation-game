@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +11,10 @@ namespace Relanima.TitleScreen
 
         public void LessTime()
         {
-            if (_value <= 5) return;
+            var parsedTime = int.Parse(time.text);
+            if (parsedTime <= 5) return;
         
-            _value = int.Parse(time.text) - 5;
+            _value = parsedTime - 5;
             UpdateTimeDisplay();
         }
         public void MoreTime()

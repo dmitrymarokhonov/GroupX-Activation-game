@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: GameShop Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: GameShop
+  m_TableCollectionNameGuidString: f38f2451fe6443e4c9c0d9dc8cd8ef02
+  m_Entries:
+  - m_Id: 13110337536
+    m_Key: SHOP_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131259686912
+    m_Key: SHOP_INSTRUCTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 312923381760
+    m_Key: RESOURCE_AMOUNT_TEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2654829797376
+    m_Key: PRICE_OF_EXTENSION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3125799804928
+    m_Key: NOT_ENOUGH_RESOURCES_PROMPT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3318435799040
+    m_Key: NOT_ENOUGH_RESOURCES_PROMPT_OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7181385588736
+    m_Key: EXTENSION_UNLOCKED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14539918663680
+    m_Key: SHOP_BUTTON
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1649763017176

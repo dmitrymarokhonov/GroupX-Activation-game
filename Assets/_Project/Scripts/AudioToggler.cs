@@ -1,14 +1,28 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Relanima
 {
     public class AudioToggler : MonoBehaviour
     {
-        private bool _isAudioEnabled = true;
-
         [SerializeField] private GameObject audioOnObject;
+        [SerializeField] private Color audioOnColor;
         [SerializeField] private GameObject audioOffObject;
-        
+        [SerializeField] private Color audioOffColor;
+
+        private bool _isAudioEnabled = true;
+        private Image _image;
+        private Shadow _shadow;
+        private Vector2 _originalShadowDistance;
+
+        private void Awake()
+        {
+            _shadow = GetComponent<Shadow>();
+            _originalShadowDistance = _shadow.effectDistance;
+            _image = GetComponent<Image>();
+        }
+
         public void ToggleAudio()
         {
             _isAudioEnabled = !_isAudioEnabled;
@@ -16,11 +30,16 @@ namespace Relanima
             {
                 audioOnObject.SetActive(true);
                 audioOffObject.SetActive(false);
+                _image.color = audioOnColor;
+                _shadow.effectDistance = _originalShadowDistance;
+
             }
             else
             {
                 audioOnObject.SetActive(false);
                 audioOffObject.SetActive(true);
+                _image.color = audioOffColor;
+                _shadow.effectDistance = new Vector2(0, 0);
             }
         }
     }

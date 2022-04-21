@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TitleScreen Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TitleScreen
+  m_TableCollectionNameGuidString: 138df1385070e904aaabc6a96d70bd3c
+  m_Entries:
+  - m_Id: 104692965376
+    m_Key: NEW_GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213111529472
+    m_Key: LOAD_GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306938109952
+    m_Key: INFO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363292778496
+    m_Key: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1173191909376
+    m_Key: GAME_TIME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1254917922816
+    m_Key: USERNAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459474128896
+    m_Key: ENTER_USERNAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1711979618304
+    m_Key: SET_GAME_TIME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963545583616
+    m_Key: GAME_TIME_MINUTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2147641974784
+    m_Key: START_NEW_GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2248783421440
+    m_Key: GO_BACK_TO_TITLE_SCREEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2436864401408
+    m_Key: AUDIO_ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2944677175296
+    m_Key: AUDIO_OFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6073619570688
+    m_Key: AUDIO_TOGGLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30191760957440
+    m_Key: QUIT_GAME_PROMPT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30371247808512
+    m_Key: PROMPT_YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30400616325120
+    m_Key: PROMPT_NO
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1649755633596

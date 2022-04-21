@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace Relanima.Camera
 {
-    [RequireComponent(typeof(SmoothTransition))]
     public class CameraScript : MonoBehaviour
     {
         // Camera position, angle and centre rotation points.

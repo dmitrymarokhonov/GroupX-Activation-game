@@ -23,11 +23,20 @@ MonoBehaviour:
     m_Key: CAMERA_CONTROLS_IMAGE
     m_Metadata:
       m_Items: []
+  - m_Id: 3589666447024128
+    m_Key: COW_NEEDY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3589692988579840
+    m_Key: COW_HAPPY
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
+    - id: 1
   m_KeyGenerator:
-    id: 1
+    id: 2
   references:
     version: 1
     00000000:
@@ -45,6 +54,20 @@ MonoBehaviour:
         m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
     00000001:
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 3589666447024128
+          m_TableCodes:
+          - en
+          - fi
+        - m_KeyId: 3589692988579840
+          m_TableCodes:
+          - en
+          - fi
+        m_TypeString: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    00000002:
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
         asm: Unity.Localization}
       data:

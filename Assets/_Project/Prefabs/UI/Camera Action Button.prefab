@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 493081853275790467}
   - component: {fileID: 493081853275790466}
   - component: {fileID: 493081853275790477}
+  - component: {fileID: 6015358453463810904}
   m_Layer: 5
   m_Name: Camera Action Button
   m_TagString: Untagged
@@ -268,3 +269,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6015358453463810904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493081853275790479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4b2cfaf31a4c60b4b54c68859a81e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 97c963d5d9661f74f99db398afa924af, type: 3}

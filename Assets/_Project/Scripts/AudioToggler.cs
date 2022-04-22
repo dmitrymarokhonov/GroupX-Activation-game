@@ -10,7 +10,7 @@ namespace Relanima
         [SerializeField] private GameObject audioOffObject;
         [SerializeField] private Color audioOffColor;
 
-        private bool _isAudioEnabled = true;
+        private bool _isAudioMuted;
         private Image _image;
         private Shadow _shadow;
         private Vector2 _originalShadowDistance;
@@ -18,7 +18,7 @@ namespace Relanima
 
         private void Awake()
         {
-            _audioSource = UnityEngine.Camera.main.GetComponent<AudioSource>();
+            if (UnityEngine.Camera.main != null) _audioSource = UnityEngine.Camera.main.GetComponent<AudioSource>();
             _shadow = GetComponent<Shadow>();
             _originalShadowDistance = _shadow.effectDistance;
             _image = GetComponent<Image>();
@@ -26,23 +26,33 @@ namespace Relanima
 
         public void ToggleAudio()
         {
-            _isAudioEnabled = !_isAudioEnabled;
-            if (_isAudioEnabled)
-            {
-                audioOnObject.SetActive(true);
-                audioOffObject.SetActive(false);
-                _image.color = audioOnColor;
-                _shadow.effectDistance = _originalShadowDistance;
-                _audioSource.mute = false;
-            }
-            else
-            {
-                audioOnObject.SetActive(false);
-                audioOffObject.SetActive(true);
-                _image.color = audioOffColor;
-                _shadow.effectDistance = new Vector2(0, 0);
-                _audioSource.mute = true;
-            }
+            _isAudioMuted = !_isAudioMuted;
+
+            DisplayAudioIcon(_isAudioMuted);
+            SetButtonBackgroundColor(_isAudioMuted);
+            SetButtonShadowSize(_isAudioMuted);
+            SetAudioSourceMute(_isAudioMuted);
+        }
+
+        private void SetButtonShadowSize(bool isMuted)
+        {
+            _shadow.effectDistance = isMuted ? new Vector2(0, 0) : _originalShadowDistance;
+        }
+
+        private void SetButtonBackgroundColor(bool isMuted)
+        {
+            _image.color = isMuted ? audioOffColor : audioOnColor;
+        }
+
+        private void DisplayAudioIcon(bool isMuted)
+        {
+            audioOnObject.SetActive(!isMuted);
+            audioOffObject.SetActive(isMuted);
+        }
+
+        private void SetAudioSourceMute(bool isMuted)
+        {
+            _audioSource.mute = isMuted;
         }
     }
 }

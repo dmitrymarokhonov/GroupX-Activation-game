@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 7284816470035757890}
   - component: {fileID: 7284816470035757891}
   - component: {fileID: 7284816470035757892}
+  - component: {fileID: 6807905381700601984}
   m_Layer: 5
   m_Name: PlusTime
   m_TagString: Untagged
@@ -364,6 +365,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: {fileID: 7284816469664899539}
+--- !u!114 &6807905381700601984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284816470035757889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4b2cfaf31a4c60b4b54c68859a81e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 97c963d5d9661f74f99db398afa924af, type: 3}
 --- !u!1 &7284816470363197947
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +391,7 @@ GameObject:
   - component: {fileID: 7284816470363197948}
   - component: {fileID: 7284816470363197949}
   - component: {fileID: 7284816470363197950}
+  - component: {fileID: 5657465326894440178}
   m_Layer: 5
   m_Name: MinusTime
   m_TagString: Untagged
@@ -511,6 +526,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: {fileID: 7284816469664899539}
+--- !u!114 &5657465326894440178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284816470363197947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4b2cfaf31a4c60b4b54c68859a81e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 97c963d5d9661f74f99db398afa924af, type: 3}
 --- !u!1 &7284816471242558078
 GameObject:
   m_ObjectHideFlags: 0

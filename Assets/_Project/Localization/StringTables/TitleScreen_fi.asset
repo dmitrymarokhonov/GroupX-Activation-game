@@ -52,11 +52,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1963545583616
-    m_Localized: Peliaika (minuuttia)
+    m_Localized: "Peliaika minuutit\n(0=ei k\xE4yt\xF6ss\xE4)"
     m_Metadata:
       m_Items: []
   - m_Id: 2147641974784
-    m_Localized: Aloita uusi peli
+    m_Localized: Aloita peli
     m_Metadata:
       m_Items: []
   - m_Id: 2248783421440

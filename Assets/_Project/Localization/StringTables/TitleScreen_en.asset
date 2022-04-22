@@ -52,11 +52,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1963545583616
-    m_Localized: Game Time (minutes)
+    m_Localized: 'Game Time minutes
+
+      (0=disabled)'
     m_Metadata:
       m_Items: []
   - m_Id: 2147641974784
-    m_Localized: Start new game
+    m_Localized: Start game
     m_Metadata:
       m_Items: []
   - m_Id: 2248783421440

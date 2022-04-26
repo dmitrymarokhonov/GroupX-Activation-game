@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Relanima.Rewards;
 using UnityEngine;
 using UnityEngine.UI;
+using Relanima.GameManager;
 
 namespace Relanima.Shop
 {
@@ -10,15 +11,8 @@ namespace Relanima.Shop
         public Button notEnough;
         public Button ok;
     
-        public enum Extension
-        {
-            Cow,
-            Deer,
-            Panda,
-            Giraffe
-        }
-
-        private readonly List<Extension> _boughtExtensions = new List<Extension> { Extension.Cow };
+        public GameObject GameManagerElement;
+        private readonly List<Extension> _boughtExtensions = new List<GameManager.Extension> { Extension.Cow };
         private readonly Dictionary<Extension, int> _extensionPrice = new Dictionary<Extension, int>
         {
             {Extension.Cow, 0},
@@ -49,7 +43,9 @@ namespace Relanima.Shop
                 return false;
             }
 
+            GameManagerElement = GameObject.Find("GameManager");
             _boughtExtensions.Add(extension);
+            GameManagerElement.GetComponent<GameManagerElement>().AddBoughtAnimalToTheGame(extension);
             RewardManager.instance.ReduceRewardsBy(PriceOf(extension));
             
             return true;

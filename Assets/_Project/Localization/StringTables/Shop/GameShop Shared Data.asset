@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: SHOP_BUTTON
     m_Metadata:
       m_Items: []
+  - m_Id: 3576831964864512
+    m_Key: CLOSE_SHOP
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

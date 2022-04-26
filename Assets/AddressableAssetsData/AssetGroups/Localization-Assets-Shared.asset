@@ -46,6 +46,23 @@ MonoBehaviour:
     m_Address: Assets/_Project/Localization/StringTables/Shop/GameShop Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: a0e6bfdbc706b2e48878c5bb30b4501c
+    m_Address: Assets/_Project/Localization/StringTables/GameField/GameField Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: bab8c087b9cc33b4ca853412aa20fa7a
+    m_Address: cowattention
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-fi
+  - m_GUID: 8be395d480543b54983e2f38eb4435b7
+    m_Address: happycow
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-fi
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 9b893b5255568714a8c61f4153877f66, type: 2}
   m_SchemaSet:

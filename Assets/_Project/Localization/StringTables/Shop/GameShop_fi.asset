@@ -54,6 +54,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - id: 0
+  - m_Id: 3576831964864512
+    m_Localized: Sulje Kauppa
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
     00000000:

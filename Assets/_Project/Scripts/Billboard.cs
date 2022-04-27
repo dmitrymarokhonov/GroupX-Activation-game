@@ -1,14 +1,17 @@
 using UnityEngine;
 
-namespace Relanima
+namespace Billboard
 {
     public class Billboard : MonoBehaviour
     {
-        public Transform cam;
+        private Camera mainCamera;
+        private Transform mainCameraT;
 
         private void LateUpdate()
         {
-            transform.LookAt(transform.position + cam.forward);    
+            mainCamera = Camera.main;
+            mainCameraT = mainCamera.transform;
+            transform.LookAt(transform.position + mainCameraT.forward);
         }
     }
 }

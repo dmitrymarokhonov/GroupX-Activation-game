@@ -10,7 +10,7 @@ namespace Relanima.Shop
         public Text unlockedText;
         public Image lockImage;
     
-        public Shop.Extension extension;
+        public Extension extension;
         public Shop shopManager;
 
         private void Start()

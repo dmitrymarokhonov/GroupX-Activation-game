@@ -1,3 +1,4 @@
+using Relanima.GameManager;
 using TMPro;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Relanima.Rewards
     {
         public TextMeshProUGUI rewardDisplay;
         
-        private static int _rewardsCollected;
+        // private static int _rewardsCollected;
         private static int _totalRewardsSpawned;
         private const int MaxRewardsOnField = 50;
         
@@ -33,7 +34,7 @@ namespace Relanima.Rewards
 
         public void CollectReward()
         {
-            _rewardsCollected++;
+            GameManagerElement.instance.AddScore();
             _totalRewardsSpawned--;
             UpdateRewardDisplay();
         }
@@ -46,23 +47,19 @@ namespace Relanima.Rewards
             _totalRewardsSpawned++;
         }
 
-        public static int RewardCount()
-        {
-            return _rewardsCollected;
-        }
-
         public void ReduceRewardsBy(int amount)
         {
-            _rewardsCollected -= amount;
-            if (_rewardsCollected < 0)
-                _rewardsCollected = 0;
+            GameManagerElement.instance.ReduceRewardsBy(amount);
+            
+            if (GameManagerElement.instance.GetScore() < 0)
+                GameManagerElement.instance.SetScore(0); 
             
             UpdateRewardDisplay();
         }
         
         private void UpdateRewardDisplay()
         {
-            rewardDisplay.text = _rewardsCollected.ToString();
+            rewardDisplay.text = GameManagerElement.instance.GetScore().ToString();
         }
     }
 }

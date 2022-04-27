@@ -1,29 +1,16 @@
 using UnityEngine;
-using System.Collections;
-using Relanima.GameManager;
 
-public static class ExtensionMethods
+namespace Relanima.GameManager
 {
-
-    public static void InstantiateBoughtExtension(this Extension boughtItem,
-     GameObject boughtItemPrefab)
+    public static class ExtensionMethods
     {
-        switch (boughtItem)
+        public static void AddAnimals(GameObject boughtItemPrefab)
         {
-            case Extension.Panda:
-                addAnimals(boughtItemPrefab);
-                break;
-            default:
-                addAnimals(boughtItemPrefab);
-                break;
+            int spawnAmount = 15;
+            float scaleLowLimit = 0.7f;
+            float scaleHighLimit = 1.2f;
+            InstantiateAnimals.SpawnAnimals(boughtItemPrefab, spawnAmount,
+                scaleLowLimit, scaleHighLimit);
         }
-    }
-    private static void addAnimals(GameObject boughtItemPrefab)
-    {
-        int spawnAmount = 15;
-        float scaleLowLimit = 0.7f;
-        float scaleHighLimit = 1.2f;
-        Relanima.InstantiateAnimals.SpawnAnimals(boughtItemPrefab, spawnAmount,
-         scaleLowLimit, scaleHighLimit);
     }
 }

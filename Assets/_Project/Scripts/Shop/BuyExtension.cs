@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Relanima.GameManager;
 
 namespace Relanima.Shop
 {
@@ -11,7 +10,7 @@ namespace Relanima.Shop
         public Text unlockedText;
         public Image lockImage;
     
-        public GameManager.Extension extension;
+        public Extension extension;
         public Shop shopManager;
 
         private void Start()

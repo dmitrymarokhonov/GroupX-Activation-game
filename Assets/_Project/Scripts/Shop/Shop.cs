@@ -10,9 +10,7 @@ namespace Relanima.Shop
     {
         public Button notEnough;
         public Button ok;
-    
-        public GameObject GameManagerElement;
-        private readonly List<Extension> _boughtExtensions = new List<GameManager.Extension> { Extension.Cow };
+        
         private readonly Dictionary<Extension, int> _extensionPrice = new Dictionary<Extension, int>
         {
             {Extension.Cow, 0},
@@ -23,7 +21,7 @@ namespace Relanima.Shop
 
         public bool IsExtensionBought(Extension extension)
         {
-            return _boughtExtensions.Contains(extension);
+            return GameManagerElement.instance.GetBoughtExtensionsList().Contains(extension);
         }
 
         public int PriceOf(Extension extension)
@@ -35,17 +33,16 @@ namespace Relanima.Shop
         {
             if (IsExtensionBought(extension)) return false;
 
-            var resources = RewardManager.RewardCount();
+            var resources = GameManagerElement.instance.GetScore();
             
             if (resources < PriceOf(extension))
             {
                 DisplayInsufficientFunds();
                 return false;
             }
-
-            GameManagerElement = GameObject.Find("GameManager");
-            _boughtExtensions.Add(extension);
-            GameManagerElement.GetComponent<GameManagerElement>().AddBoughtAnimalToTheGame(extension);
+            
+            GameManagerElement.instance.AddBoughtExtension(extension);
+            GameManagerElement.instance.AddBoughtAnimalToTheGame(extension);
             RewardManager.instance.ReduceRewardsBy(PriceOf(extension));
             
             return true;

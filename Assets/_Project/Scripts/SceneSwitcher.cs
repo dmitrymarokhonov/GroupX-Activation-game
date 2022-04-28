@@ -35,9 +35,8 @@ namespace Relanima
         {
             transition.SetTrigger(Start);
 
-            yield return new WaitForSeconds(transitionTime);
-            
-            SceneManager.LoadScene(sceneIndex);
+            yield return new WaitForSeconds(3f);
+            yield return SceneManager.LoadSceneAsync(sceneIndex);
         }
     }
 }

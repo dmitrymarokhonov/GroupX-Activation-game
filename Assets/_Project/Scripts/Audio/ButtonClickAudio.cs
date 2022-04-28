@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Relanima
+namespace Relanima.Audio
 {
     public class ButtonClickAudio : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace Relanima
 
         private void Awake()
         {
-            if (UnityEngine.Camera.main != null) _audioSource = UnityEngine.Camera.main.GetComponent<AudioSource>();
+            _audioSource = FindObjectOfType<AudioSource>();
             _button = GetComponent<Button>();
             _button.onClick.AddListener(() => _audioSource.PlayOneShot(clickSound, 1));
         }

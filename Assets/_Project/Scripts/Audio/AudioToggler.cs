@@ -1,7 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Relanima
+namespace Relanima.Audio
 {
     public class AudioToggler : MonoBehaviour
     {
@@ -14,20 +15,28 @@ namespace Relanima
         private Image _image;
         private Shadow _shadow;
         private Vector2 _originalShadowDistance;
-        private AudioSource _audioSource;
 
         private void Awake()
         {
-            if (UnityEngine.Camera.main != null) _audioSource = UnityEngine.Camera.main.GetComponent<AudioSource>();
             _shadow = GetComponent<Shadow>();
             _originalShadowDistance = _shadow.effectDistance;
             _image = GetComponent<Image>();
+            _isAudioMuted = FindObjectOfType<AudioController>().IsAudioMuted();
+            SetAudioMuteStatus();
         }
 
         public void ToggleAudio()
         {
             _isAudioMuted = !_isAudioMuted;
 
+            DisplayAudioIcon(_isAudioMuted);
+            SetButtonBackgroundColor(_isAudioMuted);
+            SetButtonShadowSize(_isAudioMuted);
+            SetAudioSourceMute(_isAudioMuted);
+        }
+
+        private void SetAudioMuteStatus()
+        {
             DisplayAudioIcon(_isAudioMuted);
             SetButtonBackgroundColor(_isAudioMuted);
             SetButtonShadowSize(_isAudioMuted);
@@ -52,7 +61,8 @@ namespace Relanima
 
         private void SetAudioSourceMute(bool isMuted)
         {
-            _audioSource.mute = isMuted;
+            var audioController = FindObjectOfType<AudioController>();
+            audioController.SetMuteAudio(isMuted);
         }
     }
 }

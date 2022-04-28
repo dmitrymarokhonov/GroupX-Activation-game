@@ -33,7 +33,7 @@ namespace Relanima.Shop
         {
             if (IsExtensionBought(extension)) return false;
 
-            var resources = GameManagerElement.instance.GetScore();
+            var resources = GameManagerElement.instance.GetResources();
             
             if (resources < PriceOf(extension))
             {

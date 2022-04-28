@@ -1,15 +1,19 @@
 using UnityEngine;
 
-namespace Relanima
+namespace Relanima.Audio
 {
     public class AudioController : MonoBehaviour
     {
-        public AudioClip[] notes;
+        [SerializeField] private AudioClip[] notes;
+        [SerializeField] private AudioClip titleScreenMusic;
+        [SerializeField] private AudioClip gameFieldMusic;
+        
         private AudioSource _audioSource;
 
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
+            _audioSource.loop = true;
         }
 
         public void PlayClip(float value)
@@ -29,6 +33,20 @@ namespace Relanima
         {
             _audioSource.mute = !_audioSource.mute;
         }
+
+        public void SetMuteAudio(bool isMuted)
+        {
+            if (_audioSource == null)
+            {
+                Debug.Log("AudioSource null");
+            }
+            _audioSource.mute = isMuted;
+        }
+
+        public bool IsAudioMuted()
+        {
+            return _audioSource.mute;
+        }
         
         private int NormalizeValueToRange(float value)
         {
@@ -39,6 +57,18 @@ namespace Relanima
                 normalizedValue %= max;
         
             return normalizedValue;
+        }
+
+        public void PlayTitleScreenMusic()
+        {
+            _audioSource.clip = titleScreenMusic;
+            _audioSource.Play();
+        }
+
+        public void PlayGameFieldMusic()
+        {
+            _audioSource.clip = gameFieldMusic;
+            _audioSource.Play();
         }
     }
 }

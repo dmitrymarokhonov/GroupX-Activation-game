@@ -99,6 +99,7 @@ namespace Relanima.GameManager
             _playerResources = 0;
             _boughtExtensions.Clear();
             _boughtExtensions.Add(Extension.Cow);
+            _playTimeInSeconds = 0;
             Debug.Log("Game Status is reset.");
         }
 
@@ -138,7 +139,7 @@ namespace Relanima.GameManager
             GoToGameField(InitiateLoadGameActions);
         }
 
-        public void GoToGameField(Action afterSceneLoadedActions)
+        private void GoToGameField(Action afterSceneLoadedActions)
         {
             StartCoroutine(LoadScene(1, afterSceneLoadedActions));
             InvokeRepeating(nameof(SaveGame), 0, 5f);
@@ -173,8 +174,19 @@ namespace Relanima.GameManager
             audioController.PlayGameFieldMusic();
             InstantiateBoughtExtensions();
             InitiateDayNightCycle();
+            InitiateGameTimer();
         }
-        
+
+        private void InitiateGameTimer()
+        {
+            if (_playTimeInSeconds == 0) return;
+            
+            var timer = FindObjectOfType<Timer>(true);
+            timer.gameObject.SetActive(true);
+            timer.SetTimeRemainingInSeconds(_playTimeInSeconds);
+            timer.StartTimer();
+        }
+
         private void InitiateLogOutActions()
         {
             var audioController = FindObjectOfType<AudioController>();
@@ -208,6 +220,14 @@ namespace Relanima.GameManager
         public void SetPlayTime(int playTimeInSeconds)
         {
             _playTimeInSeconds = playTimeInSeconds;
+        }
+
+        public void QuitGame()
+        {
+            CancelInvoke();
+            SaveGame();
+            
+            Application.Quit();
         }
     }
 }

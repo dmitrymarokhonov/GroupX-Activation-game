@@ -22,7 +22,7 @@ namespace Relanima.Happiness
             happySliderBar.SetMaxValue(maxHappiness);
             _currentState = new UnhappyState(this);
             _addition = maxHappiness / 8;
-            _audioController = GameObject.Find("Main Camera").GetComponent<AudioController>();
+            _audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
         }
 
         private void Update()

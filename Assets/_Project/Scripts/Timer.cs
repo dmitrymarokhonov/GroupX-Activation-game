@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,29 +7,24 @@ namespace Relanima
 {
     public class Timer : MonoBehaviour
     {
-        public float timeRemainingSeconds;
+        private float _timeRemainingSeconds;
         private bool _isRunning;
 
-        public Text timerDisplay;
-        
-        private void Start()
-        {
-            _isRunning = true;
-        }
-        
+        public TMP_Text timerDisplay;
+ 
         private void Update()
         {
             if (!_isRunning) return;
 
-            if (timeRemainingSeconds > 0)
+            if (_timeRemainingSeconds > 0)
             {
-                timeRemainingSeconds -= Time.deltaTime;
-                DisplayTime(timeRemainingSeconds);
+                _timeRemainingSeconds -= Time.deltaTime;
+                DisplayTime(_timeRemainingSeconds);
             }
             else
             {
                 Debug.Log("Time has run out!");
-                timeRemainingSeconds = 0;
+                _timeRemainingSeconds = 0;
                 _isRunning = false;
             }
         }
@@ -59,6 +55,21 @@ namespace Relanima
             var minutes = Math.Floor(timeToDisplay / 60);
             var seconds = Math.Floor(timeToDisplay % 60);
             timerDisplay.text = $"{minutes:00}min {seconds:00}s";
+        }
+
+        public void SetTimeRemainingInSeconds(int seconds)
+        {
+            _timeRemainingSeconds = seconds;
+        }
+        
+        public void StartTimer()
+        {
+            _isRunning = true;
+        }
+
+        public void StopTimer()
+        {
+            _isRunning = false;
         }
     }
 }

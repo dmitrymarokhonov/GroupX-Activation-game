@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +13,12 @@ namespace Relanima.Audio
 
         private void Awake()
         {
-            _audioSource = FindObjectOfType<AudioSource>();
             _button = GetComponent<Button>();
+        }
+
+        private void Start()
+        {
+            _audioSource = FindObjectOfType<AudioSource>();
             _button.onClick.AddListener(() => _audioSource.PlayOneShot(clickSound, 1));
         }
     }

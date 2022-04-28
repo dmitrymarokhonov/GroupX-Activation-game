@@ -18,5 +18,20 @@ namespace Relanima.GameManager
         {
             GameManagerElement.instance.LogOut();
         }
+
+        public void QuitFromTitleScreen()
+        {
+            Application.Quit();
+        }
+
+        public void SaveAndQuit()
+        {
+            GameManagerElement.instance.QuitGame();
+        }
+        
+        public int RewardCount()
+        {
+            return GameManagerElement.instance.GetResources();
+        }
     }
 }

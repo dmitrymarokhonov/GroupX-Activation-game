@@ -21,7 +21,12 @@ namespace Relanima.Audio
             _shadow = GetComponent<Shadow>();
             _originalShadowDistance = _shadow.effectDistance;
             _image = GetComponent<Image>();
-            _isAudioMuted = FindObjectOfType<AudioController>().IsAudioMuted();
+        }
+
+        private void Start()
+        {
+            // _isAudioMuted = FindObjectOfType<AudioController>().IsAudioMuted();
+            _isAudioMuted = GameObject.Find("AudioController").GetComponent<AudioController>().IsAudioMuted();
             SetAudioMuteStatus();
         }
 

@@ -36,16 +36,14 @@ namespace Relanima.Audio
 
         public void SetMuteAudio(bool isMuted)
         {
-            if (_audioSource == null)
-            {
-                Debug.Log("AudioSource null");
-            }
-            _audioSource.mute = isMuted;
+            var audioSource = FindObjectOfType<AudioSource>();
+            audioSource.mute = isMuted;
         }
 
         public bool IsAudioMuted()
         {
-            return _audioSource.mute;
+            var audioSource = FindObjectOfType<AudioSource>();
+            return audioSource.mute;
         }
         
         private int NormalizeValueToRange(float value)

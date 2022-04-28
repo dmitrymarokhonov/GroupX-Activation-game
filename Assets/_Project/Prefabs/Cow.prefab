@@ -645,7 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1818fd4ddd221544bb3469ad6003dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!1 &559310784227398887
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHappiness: 0
   maxHappiness: 10
-  clickParticle: {fileID: 198405478074982118, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
+  clickParticle: {fileID: 198405478074982118, guid: 4adffb0018aeda44e9263f901167af1f,
+    type: 3}
   unhappyImage: {fileID: 559310783294179558}
   happySliderBar: {fileID: 559310782881218532}
 --- !u!195 &559310782553887954

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Relanima
 {
@@ -19,19 +20,19 @@ namespace Relanima
             for (var i = 0; i < spawnAmount;)
             {
                 var spawnLocation = GetRandomAnimalSpawnPosition(animalSpawnerLocation);
-                var intersectingOtherElements = Physics.OverlapSphere(spawnLocation, 0.1f);
-                var groundCheckLocation = new Vector3(spawnLocation.x, spawnLocation.y-5, spawnLocation.z);
-                var intersectingGroundUnder = Physics.OverlapSphere(groundCheckLocation, 0.5f);
-                
-                if (intersectingOtherElements.Length == 0 && intersectingGroundUnder.Length != 0)
+                const int areaMask = NavMesh.AllAreas;
+
+                var spawnLocationOnNavMesh = NavMesh.SamplePosition(spawnLocation, out var hit, 1f, areaMask);
+
+                if (spawnLocationOnNavMesh)
                 {
-                    SpawnSingleAnimal(spawnLocation, spawnAnimal);
+                    SpawnSingleAnimal(hit.position, spawnAnimal);
                     i++;
                 }
-                else 
+                else
                 {
                     failedSpawnTries++;
-                    if(failedSpawnTries > 50)
+                    if (failedSpawnTries > 50)
                     {
                         return; // Stop trying to spawn
                     }

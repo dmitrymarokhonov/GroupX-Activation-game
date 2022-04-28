@@ -6,7 +6,12 @@ namespace Relanima.GameManager
     {
         public void StartGame()
         {
-            GameManagerElement.instance.GoToGameField();
+            GameManagerElement.instance.StartNewGame();
+        }
+
+        public void LoadGame()
+        {
+            GameManagerElement.instance.LoadGame();
         }
 
         public void LogOut()

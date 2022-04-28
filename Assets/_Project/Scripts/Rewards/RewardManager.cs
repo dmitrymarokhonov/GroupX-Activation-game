@@ -56,7 +56,7 @@ namespace Relanima.Rewards
             UpdateRewardDisplay();
         }
         
-        private void UpdateRewardDisplay()
+        public void UpdateRewardDisplay()
         {
             rewardDisplay.text = GameManagerElement.instance.GetResources().ToString();
         }

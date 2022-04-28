@@ -1,4 +1,5 @@
 using System;
+using Relanima.GameManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,14 +13,22 @@ namespace Relanima.TitleScreen
         public void LessTime()
         {
             var parsedTime = int.Parse(time.text);
-            if (parsedTime <= 5) return;
+            if (parsedTime <= 0) return;
         
             _value = parsedTime - 5;
+            UpdateGameManagerPlayTime();
             UpdateTimeDisplay();
         }
+
+        private void UpdateGameManagerPlayTime()
+        {
+            GameManagerElement.instance.SetPlayTime(_value * 60);
+        }
+
         public void MoreTime()
         {
             _value = int.Parse(time.text) + 5;
+            UpdateGameManagerPlayTime();
             UpdateTimeDisplay();
         }
 

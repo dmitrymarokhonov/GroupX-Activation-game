@@ -1,169 +1,176 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class DaylightCycle : MonoBehaviour
+namespace Relanima
 {
-    [Header("Time settings")]
-    [Range(0.0f, 1.0f)] public float time;
-    private float timeMoon;
-    private float timeRate;
-    public float fullDayLength;
-    public float startTime;
-    public bool timeRunning;
-
-    [Header("Skyboxes")]
-    public Material earlyMorningSky;
-    public Material morningSky;
-    public Material daySky;
-    public Material eveningSky;
-    public Material lateEveningSky;
-    public Material nightSky;
-
-    [Header("Sun")]
-    public Light sun;
-    public Gradient sunColor;
-    public AnimationCurve sunIntensity;
-
-    [Header("Moon")]
-    public Light moon;
-    public AnimationCurve moonIntensity;
-
-    [Header("Other Lightning")]
-    public AnimationCurve lightingIntensityMultiplier;
-    public AnimationCurve reflectionsIntensityMultiplier;
-
-    private void Start()
+    public class DaylightCycle : MonoBehaviour
     {
-        timeRate = 1.0f / fullDayLength;
-        time = startTime;
-    }
+        [Header("Time settings")]
+        [Range(0.0f, 1.0f)] public float time;
+        private float timeMoon;
+        private float _timeRate;
+        public float fullDayLength;
+        public float startTime;
+        public bool timeRunning;
 
-    private void Update()
-    {
-        if (!timeRunning) return;
-        time += timeRate * Time.deltaTime;
+        [Header("Skyboxes")]
+        public Material earlyMorningSky;
+        public Material morningSky;
+        public Material daySky;
+        public Material eveningSky;
+        public Material lateEveningSky;
+        public Material nightSky;
 
-        SkyBoxRotationBasedOnTime(time);
+        [Header("Sun")]
+        public Light sun;
+        public Gradient sunColor;
+        public AnimationCurve sunIntensity;
 
-        ShutdownReflectionOnNight(time);
+        [Header("Moon")]
+        public Light moon;
+        public AnimationCurve moonIntensity;
 
-        SetTimeBackToStart(time);
+        [Header("Other Lightning")]
+        public AnimationCurve lightingIntensityMultiplier;
+        public AnimationCurve reflectionsIntensityMultiplier;
+        private static readonly int Rotation = Shader.PropertyToID("_Rotation");
 
-        SetSunBasedOnTime(time);
+        private void Start()
+        {
+            // _timeRate = 1.0f / fullDayLength;
+            time = startTime;
+        }
 
-        MoonIntensity(time);
+        private void Update()
+        {
+            if (!timeRunning) return;
+            time += _timeRate * Time.deltaTime;
+
+            SkyBoxRotationBasedOnTime(time);
+
+            ShutdownReflectionOnNight(time);
+
+            SetTimeBackToStart(time);
+
+            SetSunBasedOnTime(time);
+
+            MoonIntensity(time);
         
-        SetSkyBoxBasedOnTime(time);
-    }
-
-    private void SkyBoxRotationBasedOnTime(float time)
-    {
-        if (time <= 0.5f)
-        {
-            RenderSettings.skybox.SetFloat("_Rotation", 360-time*360);
+            SetSkyBoxBasedOnTime(time);
         }
-        else if (time > 0.5f)
+
+        private void SkyBoxRotationBasedOnTime(float currentTime)
         {
-            RenderSettings.skybox.SetFloat("_Rotation", 360-(time-0.5f)*360);
-        }
-    }
-
-    private void ShutdownReflectionOnNight(float time)
-    {
-        RenderSettings.ambientIntensity = lightingIntensityMultiplier.Evaluate(time);
-        RenderSettings.reflectionIntensity
-         = reflectionsIntensityMultiplier.Evaluate(time);
-    }
-    private void SetTimeBackToStart(float time)
-    {
-        if (time >= 1.0f) 
-            time = 0.0f;
-    }
-
-    private void SetSunBasedOnTime(float time)
-    {
-        SunRotation(time);
-        SunIntensity(time);
-        SunColor(time);
-    }
-
-    private void SunRotation(float time)
-    {
-        if (time <= 0.5f)
-        {
-            if (time <= 0.25f)
+            if (currentTime <= 0.5f)
             {
-                sun.transform.eulerAngles = new Vector3(20+time*2*50, 110+time*2*140, 0.0f);
+                RenderSettings.skybox.SetFloat(Rotation, 360-currentTime*360);
             }
-            else if (time > 0.25f)
+            else if (currentTime > 0.5f)
             {
-                sun.transform.eulerAngles = new Vector3(80-time*2*70, 100+time*2*160, 0.0f);
+                RenderSettings.skybox.SetFloat(Rotation, 360-(currentTime-0.5f)*360);
             }
-        // Moon rotation is not implemented in this version.
-        //} else if (time > 0.5f){
-        //    if(time <= 0.75f){
-        //    moon.transform.eulerAngles = new Vector3(0+timeMoon*2*90, 90+timeMoon*2*180, 0.0f);
-        //    } else if(time > 0.75f){
-        //        moon.transform.eulerAngles = new Vector3(90-timeMoon*2*90, 90+timeMoon*2*180, 0.0f);
-        //    }
         }
-    }
 
-    private void SunIntensity(float time)
-    {
-        if (time <= 0.5f)
+        private void ShutdownReflectionOnNight(float currentTime)
         {
-            sun.intensity = sunIntensity.Evaluate(time*2);
+            RenderSettings.ambientIntensity = lightingIntensityMultiplier.Evaluate(currentTime);
+            RenderSettings.reflectionIntensity
+                = reflectionsIntensityMultiplier.Evaluate(currentTime);
         }
-        else 
+        private void SetTimeBackToStart(float currentTime)
         {
-            sun.intensity = 0.0f;
+            if (currentTime >= 1.0f) 
+                time = 0.0f;
         }
-    }
 
-    private void SunColor(float time)
-    {
-        sun.color = sunColor.Evaluate(time*2);
-    }
+        public void SetSunBasedOnTime(float currentTime)
+        {
+            SunRotation(currentTime);
+            SunIntensity(currentTime);
+            SunColor(currentTime);
+        }
 
-    private void MoonIntensity(float time)
-    {
-        if (time > 0.5f)
+        private void SunRotation(float currentTime)
         {
-            moon.intensity = moonIntensity.Evaluate(time*2);
+            if (currentTime <= 0.5f)
+            {
+                if (currentTime <= 0.25f)
+                {
+                    sun.transform.eulerAngles = new Vector3(20+currentTime*2*50, 110+currentTime*2*140, 0.0f);
+                }
+                else if (currentTime > 0.25f)
+                {
+                    sun.transform.eulerAngles = new Vector3(80-currentTime*2*70, 100+currentTime*2*160, 0.0f);
+                }
+                // Moon rotation is not implemented in this version.
+                //} else if (time > 0.5f){
+                //    if(time <= 0.75f){
+                //    moon.transform.eulerAngles = new Vector3(0+timeMoon*2*90, 90+timeMoon*2*180, 0.0f);
+                //    } else if(time > 0.75f){
+                //        moon.transform.eulerAngles = new Vector3(90-timeMoon*2*90, 90+timeMoon*2*180, 0.0f);
+                //    }
+            }
         }
-        else
-        {
-            moon.intensity = 0.0f;
-        }
-    }
 
-    private void SetSkyBoxBasedOnTime(float time)
-    {
-        if (time <= 0.125f)
+        private void SunIntensity(float currentTime)
         {
-            RenderSettings.skybox = earlyMorningSky;
+            sun.intensity = currentTime <= 0.5f ? sunIntensity.Evaluate(currentTime*2) : 0.0f;
         }
-        else if (time <= 0.25f)
+
+        private void SunColor(float currentTime)
         {
-            RenderSettings.skybox = morningSky;
+            sun.color = sunColor.Evaluate(currentTime*2);
         }
-        else if (time <= 0.375f)
+
+        private void MoonIntensity(float currentTime)
         {
-            RenderSettings.skybox = daySky;
+            moon.intensity = currentTime > 0.5f ? moonIntensity.Evaluate(currentTime*2) : 0.0f;
         }
-        else if (time <= 0.5f)
+
+        public void SetSkyBoxBasedOnTime(float currentTime)
         {
-            RenderSettings.skybox = eveningSky;
+            
+            if (currentTime <= 0.125f)
+            {
+                RenderSettings.skybox = earlyMorningSky;
+            }
+            else if (currentTime <= 0.25f)
+            {
+                RenderSettings.skybox = morningSky;
+            }
+            else if (currentTime <= 0.375f)
+            {
+                RenderSettings.skybox = daySky;
+            }
+            else if (currentTime <= 0.5f)
+            {
+                RenderSettings.skybox = eveningSky;
+            }
+            else if (currentTime <= 0.625)
+            {
+                RenderSettings.skybox = lateEveningSky;
+            }
+            else
+            {
+                RenderSettings.skybox = nightSky;
+            }
         }
-        else if (time <= 0.625)
+
+        public void StartCycle()
         {
-            RenderSettings.skybox = lateEveningSky;
+            if (fullDayLength == 0) return;
+            timeRunning = true;
         }
-        else
+
+        public void StopCycle()
         {
-            RenderSettings.skybox = nightSky;
+            timeRunning = false;
+        }
+
+        public void CalculateTimeRate(int timeInSeconds)
+        {
+            fullDayLength = timeInSeconds;
+            _timeRate = 1.0f / fullDayLength;
         }
     }
 }

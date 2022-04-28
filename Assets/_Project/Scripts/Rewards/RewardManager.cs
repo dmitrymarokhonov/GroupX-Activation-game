@@ -6,14 +6,13 @@ namespace Relanima.Rewards
 {
     public class RewardManager : MonoBehaviour
     {
-        public TextMeshProUGUI rewardDisplay;
-        
-        // private static int _rewardsCollected;
-        private static int _totalRewardsSpawned;
-        private const int MaxRewardsOnField = 50;
-        
-        private static RewardSpawner _rewardSpawner;
         public static RewardManager instance;
+        
+        [SerializeField] private int maxRewardsOnField = 50;
+        [SerializeField] private TextMeshProUGUI rewardDisplay;
+
+        private static int _totalRewardsSpawned;
+        private static RewardSpawner _rewardSpawner;
 
         private void Awake()
         {
@@ -41,7 +40,7 @@ namespace Relanima.Rewards
 
         public static void SpawnReward(GameObject spawnRequester)
         {
-            if (_totalRewardsSpawned >= MaxRewardsOnField) return;
+            if (_totalRewardsSpawned >= instance.maxRewardsOnField) return;
             
             _rewardSpawner.SpawnReward(spawnRequester);
             _totalRewardsSpawned++;
@@ -51,15 +50,15 @@ namespace Relanima.Rewards
         {
             GameManagerElement.instance.ReduceRewardsBy(amount);
             
-            if (GameManagerElement.instance.GetScore() < 0)
-                GameManagerElement.instance.SetScore(0); 
+            if (GameManagerElement.instance.GetResources() < 0)
+                GameManagerElement.instance.SetResources(0); 
             
             UpdateRewardDisplay();
         }
         
-        private void UpdateRewardDisplay()
+        public void UpdateRewardDisplay()
         {
-            rewardDisplay.text = GameManagerElement.instance.GetScore().ToString();
+            rewardDisplay.text = GameManagerElement.instance.GetResources().ToString();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEditor.Animations;
 
 // This script is added as a component to the animal so it can move randomly.
 // Nav Mesh Agent is also required for the movement.
@@ -21,9 +22,14 @@ namespace Relanima
         private bool _isStationary = true;
         private NavMeshAgent agent;
 
+        public RuntimeAnimatorController idleAnimator;
+        public RuntimeAnimatorController walkAnimator;
+        public Vector3 previousPosition;
+
         private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
+            previousPosition = new Vector3(0,0,0);
         }
 
         public void Update()
@@ -42,7 +48,21 @@ namespace Relanima
             {
                 _isStationary = true;
             }
-        }
+
+            //var animalSleeping = this.GetComponent<Rigidbody>().IsSleeping();
+            //var animalSpeed = this.GetComponent<Rigidbody>().velocity.magnitude;
+            var positionChange = ((transform.position - previousPosition).magnitude);
+
+            if (positionChange < 0.01f)
+            {
+                this.GetComponent<Animator>().runtimeAnimatorController = idleAnimator as RuntimeAnimatorController;
+            } else
+            {
+                this.GetComponent<Animator>().runtimeAnimatorController = walkAnimator as RuntimeAnimatorController;
+            }
+
+            previousPosition = transform.position;
+        }   
 
         // This function is used for finding the next random place for the animal
         private Vector3 RandomDestination()

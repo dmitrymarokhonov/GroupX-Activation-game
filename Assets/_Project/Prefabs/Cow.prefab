@@ -864,6 +864,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   movementHelper: 150
+  idleAnimator: {fileID: 9100000, guid: 986af02ac7c56054391b85bc2ce86ca9, type: 2}
+  walkAnimator: {fileID: 9100000, guid: 027d691467d1bf04ebff8ad31b13e070, type: 2}
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &559310782553887955
 MonoBehaviour:
   m_ObjectHideFlags: 0

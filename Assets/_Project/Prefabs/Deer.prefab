@@ -237,7 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1818fd4ddd221544bb3469ad6003dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!1 &808407154293785840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1047,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   movementHelper: 150
+  idleAnimator: {fileID: 9100000, guid: 3960e6c53508192409215fd58e32acdf, type: 2}
+  walkAnimator: {fileID: 9100000, guid: 6174514776d29a24380dc9ac14593589, type: 2}
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &808407155243082813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1064,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHappiness: 0
   maxHappiness: 10
-  clickParticle: {fileID: 198405478074982118, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
+  clickParticle: {fileID: 198405478074982118, guid: 4adffb0018aeda44e9263f901167af1f,
+    type: 3}
   unhappyImage: {fileID: 808407156109994654}
   happySliderBar: {fileID: 808407154293785846}
 --- !u!195 &808407155243082814

@@ -16,7 +16,7 @@ namespace Relanima.Rewards
         {
             var tempPosition = Random.insideUnitCircle.normalized * 3;
             var xPos = spawnRequester.x + tempPosition.x;
-            var yPos = spawnRequester.y + .5f;
+            var yPos = spawnRequester.y + 1f;
             var zPos = spawnRequester.z + tempPosition.y;
             return new Vector3(xPos, yPos, zPos);
         }

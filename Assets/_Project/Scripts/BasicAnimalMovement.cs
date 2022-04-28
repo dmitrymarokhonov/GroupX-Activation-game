@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEditor.Animations;
 
 // This script is added as a component to the animal so it can move randomly.
 // Nav Mesh Agent is also required for the movement.

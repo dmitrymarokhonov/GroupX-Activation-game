@@ -59,7 +59,6 @@ namespace Relanima.GameSaving
             List<Tuple<string, string>> saves = new List<Tuple<string, string>>();
             DirectoryInfo directoryInfo = new DirectoryInfo(Application.persistentDataPath);
             foreach (var file in directoryInfo.GetFiles("*.save"))
-            // foreach (var file in Directory.GetFiles(Application.persistentDataPath, "*.save"))
             {
                 var name = Path.GetFileNameWithoutExtension(file.FullName);
                 var time = file.LastWriteTime.ToLocalTime().ToString();
@@ -72,9 +71,7 @@ namespace Relanima.GameSaving
         public static bool DeleteSaveFile(string playerName)
         {
             var fileToBeDeleted = GetSaveFilePath(playerName);
-            
-            Debug.Log("file path: " + fileToBeDeleted);
-            
+
             if (!File.Exists(fileToBeDeleted))
             {
                 Debug.LogWarning("Save file does not exists in " + fileToBeDeleted);

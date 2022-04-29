@@ -37,7 +37,6 @@ namespace Relanima
 
         private void Start()
         {
-            // _timeRate = 1.0f / fullDayLength;
             time = startTime;
         }
 

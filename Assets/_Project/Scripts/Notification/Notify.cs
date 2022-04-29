@@ -70,6 +70,32 @@ namespace Relanima.Notification
             else
                 localizedMessage.Completed += (message) => Debug.Log(message.Result);
         }
+
+        public void SaveFileDeleted()
+        {
+            var localizedMessage =
+                LocalizationSettings
+                    .StringDatabase
+                    .GetLocalizedStringAsync("ErrorMessages", "SAVE_FILE_DELETED");
+            
+            if (localizedMessage.IsDone)
+                ShowWarning(localizedMessage.Result);
+            else
+                localizedMessage.Completed += (message) => Debug.Log(message.Result);
+        }
+
+        public void SaveFileDeletionUnsuccessful()
+        {
+            var localizedMessage =
+                LocalizationSettings
+                    .StringDatabase
+                    .GetLocalizedStringAsync("ErrorMessages", "SAVE_FILE_NOT_DELETED");
+            
+            if (localizedMessage.IsDone)
+                ShowWarning(localizedMessage.Result);
+            else
+                localizedMessage.Completed += (message) => Debug.Log(message.Result);
+        }
         
         private void Show(string text, Color notificationTypeColor)
         {

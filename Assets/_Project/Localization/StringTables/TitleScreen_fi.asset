@@ -88,6 +88,10 @@ MonoBehaviour:
     m_Localized: EN
     m_Metadata:
       m_Items: []
+  - m_Id: 6189099617607680
+    m_Localized: 'Pelannut viimeksi:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
     00000000:

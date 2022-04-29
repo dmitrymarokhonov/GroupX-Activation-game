@@ -26,5 +26,13 @@ MonoBehaviour:
     m_Localized: Save file with given name cannot be found.
     m_Metadata:
       m_Items: []
+  - m_Id: 60558639357952
+    m_Localized: Save file deleted!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61037008117760
+    m_Localized: Something went wrong while trying to delete file.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -26,5 +26,13 @@ MonoBehaviour:
     m_Localized: "Antamallasi nimell\xE4 ei l\xF6ydy tallenusta."
     m_Metadata:
       m_Items: []
+  - m_Id: 60558639357952
+    m_Localized: Tallenus poistettu!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61037008117760
+    m_Localized: Tallennuksen poisto ei onnistunut.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -102,13 +102,10 @@ namespace Relanima.GameManager
             _boughtExtensions.Clear();
             _boughtExtensions.Add(Extension.Cow);
             _playTimeInSeconds = 0;
-            Debug.Log("Game Status is reset.");
         }
 
         public void SaveGame()
         {
-            Debug.Log("Game saved");
-            
             var success = SaveSystem.SaveGameStatus(this);
             
             if (!success)
@@ -151,6 +148,12 @@ namespace Relanima.GameManager
             
             GoToGameField(InitiateLoadGameActions);
         }
+        //
+        // public void FilterLoadGameList()
+        // {
+        //     var list = FindObjectOfType<SavedGamesList>();
+        //     list.FilterListByName();
+        // }
 
         private void GoToGameField(Action afterSceneLoadedActions)
         {

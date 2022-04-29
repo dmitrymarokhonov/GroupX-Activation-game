@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: SAVE_FILE_NOT_FOUND
     m_Metadata:
       m_Items: []
+  - m_Id: 60558639357952
+    m_Key: SAVE_FILE_DELETED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61037008117760
+    m_Key: SAVE_FILE_NOT_DELETED
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

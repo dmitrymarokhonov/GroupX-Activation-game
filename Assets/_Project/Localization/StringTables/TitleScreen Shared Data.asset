@@ -83,6 +83,10 @@ MonoBehaviour:
     m_Key: PROMPT_NO
     m_Metadata:
       m_Items: []
+  - m_Id: 6189099617607680
+    m_Key: LAST_PLAYED
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

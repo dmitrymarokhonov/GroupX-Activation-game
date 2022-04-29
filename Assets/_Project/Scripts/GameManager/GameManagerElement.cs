@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Relanima.Audio;
 using Relanima.GameSaving;
+using Relanima.Notification;
 using Relanima.Rewards;
 using Relanima.SceneManagement;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 namespace Relanima.GameManager
@@ -93,20 +95,17 @@ namespace Relanima.GameManager
             playerName = plrName;
         }
 
-        private void ResetGameStatus()
+        public void ResetGameStatus()
         {
             playerName = "";
             _playerResources = 0;
             _boughtExtensions.Clear();
             _boughtExtensions.Add(Extension.Cow);
             _playTimeInSeconds = 0;
-            Debug.Log("Game Status is reset.");
         }
 
         public void SaveGame()
         {
-            Debug.Log("Game saved");
-            
             var success = SaveSystem.SaveGameStatus(this);
             
             if (!success)
@@ -117,7 +116,8 @@ namespace Relanima.GameManager
         {
             if (playerName.Length < 1)
             {
-                Debug.Log("Empty name");
+                var notifier = FindObjectOfType<Notify>();
+                notifier.EmptyPlayerName();
                 return;
             }
             
@@ -128,11 +128,21 @@ namespace Relanima.GameManager
         {
             if (playerName.Length < 1)
             {
-                Debug.Log("Empty name");
+                var notifier = FindObjectOfType<Notify>();
+                notifier.EmptyPlayerName();
                 return;
             }
             
             var data = SaveSystem.LoadGameStatus(playerName);
+
+            if (data == null)
+            {
+                var notifier = FindObjectOfType<Notify>();
+                notifier.SaveFileNotFound();
+
+                return;
+            }
+            
             SetResources(data.resources);
             _boughtExtensions = data.boughtExtensions;
             

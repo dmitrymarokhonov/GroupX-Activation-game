@@ -90,6 +90,10 @@ MonoBehaviour:
     m_Localized: NO
     m_Metadata:
       m_Items: []
+  - m_Id: 6189099617607680
+    m_Localized: 'Last played:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
     00000000:

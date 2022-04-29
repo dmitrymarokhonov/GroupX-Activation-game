@@ -148,12 +148,6 @@ namespace Relanima.GameManager
             
             GoToGameField(InitiateLoadGameActions);
         }
-        //
-        // public void FilterLoadGameList()
-        // {
-        //     var list = FindObjectOfType<SavedGamesList>();
-        //     list.FilterListByName();
-        // }
 
         private void GoToGameField(Action afterSceneLoadedActions)
         {

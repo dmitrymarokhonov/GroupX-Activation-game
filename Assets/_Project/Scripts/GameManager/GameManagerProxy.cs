@@ -33,12 +33,7 @@ namespace Relanima.GameManager
         {
             GameManagerElement.instance.ResetGameStatus();
         }
-        //
-        // public void FilterLoadGameList()
-        // {
-        //     GameManagerElement.instance.FilterLoadGameList();
-        // }
-        
+
         public int RewardCount()
         {
             return GameManagerElement.instance.GetResources();

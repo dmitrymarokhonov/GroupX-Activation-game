@@ -31,6 +31,18 @@ MonoBehaviour:
     m_Key: LOG_OUT_BUTTON
     m_Metadata:
       m_Items: []
+  - m_Id: 2605085782695936
+    m_Key: GAME_TIMER_RUN_OUT_HEADER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2605172088889344
+    m_Key: GAME_TIMER_RUN_OUT_QUESTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2605345493999616
+    m_Key: CONTINUE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

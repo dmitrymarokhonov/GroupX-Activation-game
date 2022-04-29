@@ -34,5 +34,17 @@ MonoBehaviour:
     m_Localized: Kirjaudu ulos
     m_Metadata:
       m_Items: []
+  - m_Id: 2605085782695936
+    m_Localized: "Peliaika p\xE4\xE4ttyi!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2605172088889344
+    m_Localized: "Mit\xE4 haluat tehd\xE4?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2605345493999616
+    m_Localized: "Jatka peli\xE4"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

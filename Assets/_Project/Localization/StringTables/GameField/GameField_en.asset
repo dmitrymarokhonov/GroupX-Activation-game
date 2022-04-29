@@ -34,5 +34,17 @@ MonoBehaviour:
     m_Localized: Log Out
     m_Metadata:
       m_Items: []
+  - m_Id: 2605085782695936
+    m_Localized: You've run out of Game Time!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2605172088889344
+    m_Localized: What would you like to do?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2605345493999616
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

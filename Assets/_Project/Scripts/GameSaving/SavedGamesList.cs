@@ -47,9 +47,7 @@ namespace Relanima.GameSaving
             if (_savedFileList.Count == 0) return;
 
             DestroyAllListItems();
-            
-            Debug.Log(playerName);
-            
+
             if (playerName.Length == 0)
             {
                 InstantiateListItems(_savedFileList);
@@ -57,9 +55,6 @@ namespace Relanima.GameSaving
             else
             {
                 var savedFileList = _savedFileList.FindAll(item => item.Item1.ToUpper().Contains(playerName.ToUpper()));
-                
-                Debug.Log(savedFileList.Count);
-                
                 InstantiateListItems(savedFileList);
             }
         }

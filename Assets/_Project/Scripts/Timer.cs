@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Relanima
 {
@@ -11,7 +10,16 @@ namespace Relanima
         private bool _isRunning;
 
         public TMP_Text timerDisplay;
- 
+        public GameObject timerPanel;
+        public GameObject dimmer;
+        public GameObject dayNightCycle;
+        private DaylightCycle _daylightCycle;
+        
+        private void Awake()
+        {
+            _daylightCycle = dayNightCycle.GetComponent<DaylightCycle>();
+        }
+
         private void Update()
         {
             if (!_isRunning) return;
@@ -23,10 +31,19 @@ namespace Relanima
             }
             else
             {
-                Debug.Log("Time has run out!");
-                _timeRemainingSeconds = 0;
                 _isRunning = false;
+                _timeRemainingSeconds = 0;
+                dimmer.SetActive(true);
+                timerPanel.SetActive(true);
+                StopDaylightCycle();
             }
+        }
+
+        private void StopDaylightCycle()
+        {
+            _daylightCycle.StopCycle();
+            _daylightCycle.SetSkyBoxBasedOnTime(0.27f);
+            _daylightCycle.SetSunBasedOnTime(0.27f);
         }
 
         private void DisplayTime(float timeToDisplay)
@@ -70,6 +87,13 @@ namespace Relanima
         public void StopTimer()
         {
             _isRunning = false;
+        }
+
+        public void DisableTimer()
+        {
+            _timeRemainingSeconds = 0;
+            _isRunning = false;
+            gameObject.SetActive(false);
         }
     }
 }

@@ -28,6 +28,11 @@ namespace Relanima.GameManager
         {
             GameManagerElement.instance.QuitGame();
         }
+
+        public void ResetGameStatus()
+        {
+            GameManagerElement.instance.ResetGameStatus();
+        }
         
         public int RewardCount()
         {

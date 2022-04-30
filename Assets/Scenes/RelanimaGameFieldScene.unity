@@ -1317,7 +1317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -16, y: -16}
   m_SizeDelta: {x: 0, y: 46.9326}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &439349745
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 67248f57227ceab499e54eb3f6e0c487, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2904,8 +2904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.375, y: -45.074493}
-  m_SizeDelta: {x: 160.75, y: 58.148987}
+  m_AnchoredPosition: {x: 174.515, y: -46.2765}
+  m_SizeDelta: {x: 317.03, y: 60.553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686163264
 MonoBehaviour:
@@ -2927,7 +2927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0:00:00
+  m_text: 0min 0s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4472,11 +4472,11 @@ RectTransform:
   m_Father: {fileID: 722946398}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -826.83, y: 476}
-  m_SizeDelta: {x: -1727.2499, y: -989.851}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 16, y: -16}
+  m_SizeDelta: {x: 349.03, y: 92.553}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1068678161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4567,7 +4567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a12e2f9d15423ab7cabfc7585cdb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeRemainingSeconds: 0
   timerDisplay: {fileID: 686163264}
   timerPanel: {fileID: 2107758207}
   dimmer: {fileID: 719483273}

@@ -97,15 +97,16 @@ MonoBehaviour:
       to take breaks from playing and this tool will help the player to stop playing
       on time. When the timer is about to end, night-time will start to set in on
       the island, telling the player that the animals are about to go to sleep and
-      that it is time to say goodbye. \r\n\r\nThe game timer is an optional toggle
-      on the start screen. To set it up, tap the Game time toggle on. A timer will
-      appear on the right side of the screen. The timer is in minutes, and it can
-      be adjusted in increments of 5.  "
+      that it is time to say goodbye. \r\n\r\nThe game timer is an optional selection
+      on the start screen. To set it up, just increase the time. The timer is in
+      minutes, and it can be adjusted in increments of 5. Timer is disabled when
+      left to zero. "
     m_Metadata:
       m_Items: []
   - m_Id: 3710783578112
-    m_Localized: You can move around the island by changing your view with the view
-      toggle. You can also move the toggle itself by dragging it across the screen.
+    m_Localized: You can move around the island by changing your view with view controls.
+      You can move camera left and right, in addition to zoom in and out. You can
+      also move the control panel itself by dragging it across the screen.
     m_Metadata:
       m_Items: []
   references:

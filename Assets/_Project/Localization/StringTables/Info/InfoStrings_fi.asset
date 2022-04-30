@@ -47,8 +47,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1584623771648
-    m_Localized: "Relanima on lapsille suunnattu aktivointipeli. P\xE4\xE4asiallinen
-      tavoite on pit\xE4\xE4 huolta el\xE4imist\xE4. Peli on tarkoitettu pelattavaksi
+    m_Localized: "Relanima on lapsille suunnattu aktivointipeli, jossa tavoitteena
+      on huolehtia el\xE4inten tyytyv\xE4isyydest\xE4. Peli on tarkoitettu pelattavaksi
       mahdollisimman isolta n\xE4yt\xF6lt\xE4, jolloin pelaaja aktivoituu liikkumalla
       yletty\xE4kseen t\xE4pp\xE4\xE4m\xE4\xE4n ruudulla olevia elementtej\xE4."
     m_Metadata:
@@ -64,8 +64,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2156001222656
-    m_Localized: "Relanimassa tavoitteesi on huolehtia saaren el\xE4imist\xE4. Huolenpitoa
-      tarvitsevat el\xE4imet ilmaisevat sen puhekuplalla. T\xE4pp\xE4\xE4m\xE4ll\xE4
+    m_Localized: "Relanimassa tavoitteenasi on huolehtia saaren el\xE4imist\xE4.
+      Huolenpitoa tarvitsevat el\xE4imet ilmaisevat sen puhekuplalla. T\xE4pp\xE4\xE4m\xE4ll\xE4
       el\xE4int\xE4, sen onnellisuustaso nousee ja puhekuplan tilalle ilmestyy onnellisuusmittari.
       Onnelliset el\xE4imet pudottavat palkinnoksi t\xE4hti\xE4. Voit ker\xE4t\xE4
       t\xE4hti\xE4 t\xE4pp\xE4\xE4m\xE4ll\xE4 niit\xE4, jolloin t\xE4htim\xE4\xE4r\xE4si
@@ -84,7 +84,7 @@ MonoBehaviour:
     m_Localized: "Saadaksesi erilaisia el\xE4imi\xE4 saarelle, voit vierailla kaupassa.
       Avaa kauppa t\xE4pp\xE4\xE4m\xE4ll\xE4 ruudulla n\xE4kyv\xE4\xE4 Kauppa-ikonia.
       Valuuttana toimii t\xE4hdet, joita voit ker\xE4t\xE4 peliss\xE4. Avaamattoman
-      el\xE4inpaketin hinta n\xE4kyy sen kuvan alapuolella. Omistamiesi el\xE4inpakettia
+      el\xE4inpaketin hinta n\xE4kyy sen kuvan alapuolella. Avaamiesi el\xE4inpakettien
       alapuolella lukee \"Avattu\". Avataksesi uuden el\xE4inpaketin, t\xE4pp\xE4\xE4
       kuvaa. Jos sinulla on tarpeeksi t\xE4hti\xE4, el\xE4inpaketti avautuu ja uudet
       el\xE4imet lis\xE4t\xE4\xE4n automaattisesti saarelle."
@@ -96,9 +96,9 @@ MonoBehaviour:
       pelaajaa lopettamaan pelaamisen ajallaan. Kun ajastin on p\xE4\xE4ttym\xE4ss\xE4,
       ilta alkaa h\xE4m\xE4rt\xE4\xE4 saaren yll\xE4. Silloin on aika alkaa sanomaan
       el\xE4imille hyv\xE4\xE4 y\xF6t\xE4.\r\n\r\nPeliajastin on valinnainen asetus
-      p\xE4\xE4valikossa. Asettaaksesi ajastimen, t\xE4pp\xE4\xE4 sen valintaruutua
-      p\xE4\xE4valikossa ja valitse sopiva peliaika ilmestyneest\xE4 laskurista.
-      Peliaika valitaan viiden minuutin tarkkuudella."
+      p\xE4\xE4valikossa. Asettaaksesi ajastimen, lis\xE4\xE4 peliaika minuutteja.
+      Peliaika valitaan viiden minuutin tarkkuudella. Ajastin ei ole k\xE4yt\xF6ss\xE4,
+      jos aika j\xE4tet\xE4\xE4n nollaan."
     m_Metadata:
       m_Items: []
   - m_Id: 3710783578112

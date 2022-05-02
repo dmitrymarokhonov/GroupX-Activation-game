@@ -106,6 +106,8 @@ namespace Relanima.GameManager
 
         public void SaveGame()
         {
+            return;
+            
             var success = SaveSystem.SaveGameStatus(this);
             
             if (!success)
@@ -114,12 +116,12 @@ namespace Relanima.GameManager
 
         public void StartNewGame()
         {
-            if (playerName.Length < 1)
-            {
-                var notifier = FindObjectOfType<Notify>();
-                notifier.EmptyPlayerName();
-                return;
-            }
+            // if (playerName.Length < 1)
+            // {
+            //     var notifier = FindObjectOfType<Notify>();
+            //     notifier.EmptyPlayerName();
+            //     return;
+            // }
             
             GoToGameField(InitiateStartGameActions);
         }
@@ -152,7 +154,7 @@ namespace Relanima.GameManager
         private void GoToGameField(Action afterSceneLoadedActions)
         {
             StartCoroutine(LoadScene(1, afterSceneLoadedActions));
-            InvokeRepeating(nameof(SaveGame), 0, 5f);
+            // InvokeRepeating(nameof(SaveGame), 0, 5f);
         }
 
         private IEnumerator LoadScene(int index, Action doBeforeFadeIn = null)

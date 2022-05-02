@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 namespace Relanima.Shop
@@ -24,6 +25,7 @@ namespace Relanima.Shop
             if (!shopManager.Buy(extension)) return;
         
             Unlock();
+            GameObject.Find("StarCount").GetComponent<LocalizeStringEvent>().RefreshString();
         }
 
         public int PriceOf()
